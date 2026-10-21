@@ -198,9 +198,29 @@ CREATE TABLE productos_investigacion (
     CONSTRAINT fk_producto_semillero FOREIGN KEY (semillero_id)
         REFERENCES semilleros(id) ON DELETE SET NULL ON UPDATE CASCADE,
     CONSTRAINT fk_producto_usuario FOREIGN KEY (usuario_id)
-        REFERENCES usuarios(id) ON DELETE SET NULL ON UPDATE CASCADE,
-    CHECK (proyecto_id IS NOT NULL OR semillero_id IS NOT NULL OR usuario_id IS NOT NULL)
+        REFERENCES usuarios(id) ON DELETE SET NULL ON UPDATE CASCADE
 ) COMMENT 'RF-13 Productos de investigación';
+
+-- Regla: todo producto debe asociarse al menos a un proyecto, semillero o usuario
+-- (reemplaza el CHECK, que MySQL 8.0 no admite junto a FK con SET NULL / CASCADE)
+DELIMITER //
+CREATE TRIGGER trg_producto_asociacion_ins BEFORE INSERT ON productos_investigacion
+FOR EACH ROW
+BEGIN
+    IF NEW.proyecto_id IS NULL AND NEW.semillero_id IS NULL AND NEW.usuario_id IS NULL THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'El producto debe asociarse a un proyecto, semillero o usuario';
+    END IF;
+END//
+CREATE TRIGGER trg_producto_asociacion_upd BEFORE UPDATE ON productos_investigacion
+FOR EACH ROW
+BEGIN
+    IF NEW.proyecto_id IS NULL AND NEW.semillero_id IS NULL AND NEW.usuario_id IS NULL THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'El producto debe asociarse a un proyecto, semillero o usuario';
+    END IF;
+END//
+DELIMITER ;
 
 CREATE TABLE eventos (
     id              INT AUTO_INCREMENT PRIMARY KEY,
@@ -470,7 +490,7 @@ SELECT u.id, CONCAT(u.nombre, ' ', u.apellido) AS investigador, u.rol,
        u.xp_acumulado AS xp, u.nivel, u.estrellas,
        RANK() OVER (ORDER BY u.xp_acumulado DESC) AS posicion
 FROM usuarios u
-WHERE u.estado = 'activo' AND u.rol <> 'visitante';
+WHERE u.estado = 'activo' AND u.rol = 'estudiante_investigador';
 
 CREATE OR REPLACE VIEW vw_indicadores_publicaciones AS
 SELECT p.id, p.titulo, c.nombre AS categoria, p.vistas,

@@ -27,19 +27,17 @@ INSERT INTO categorias_publicacion (nombre, color) VALUES
 ('Reflexión investigativa', '#be123c'),
 ('Resultados de proyecto', '#0e7490');
 
--- Usuarios (contraseña de ejemplo: RIUL2026* -> hash simulado)
 INSERT INTO usuarios (programa_id, identificacion, nombre, apellido, email, password_hash, telefono, biografia, rol, estado, xp_acumulado, nivel, estrellas, posicion_ranking, fecha_registro) VALUES
 (1, '1001234567', 'María Angel', 'Duque Polo', 'maria.duque@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3001112233', 'Estudiante investigadora interesada en inteligencia artificial aplicada.', 'estudiante_investigador', 'activo', 2450, 5, 4, 1, '2026-02-01 08:00:00'),
 (1, '1007654321', 'Gabriel Enrique', 'Rodríguez Vásquez', 'gabriel.rodriguez@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3012223344', 'Focos de interés: desarrollo web y datos abiertos.', 'estudiante_investigador', 'activo', 2180, 4, 4, 2, '2026-02-01 08:10:00'),
-(2, '80123456', 'William Ricardo', 'Insignares Conde', 'william.insignares@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3103334455', 'Docente líder del semillero RIUL, líneas de investigación en innovación educativa.', 'docente_lider', 'activo', 3120, 6, 5, 3, '2026-01-15 07:30:00'),
-(3, '79988776', 'Laura Marcela', 'Gómez Ríos', 'laura.gomez@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3124445566', 'Administradora de la plataforma RIUL.', 'administrador', 'activo', 900, 3, 3, 8, '2026-01-10 07:00:00'),
+(2, '80123456', 'William Ricardo', 'Insignares Conde', 'william.insignares@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3103334455', 'Docente líder del semillero RIUL, líneas de investigación en innovación educativa.', 'docente_lider', 'activo', 3120, 5, 5, NULL, '2026-01-15 07:30:00'),
+(3, '79988776', 'Laura Marcela', 'Gómez Ríos', 'laura.gomez@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3124445566', 'Administradora de la plataforma RIUL.', 'administrador', 'activo', 900, 2, 3, NULL, '2026-01-10 07:00:00'),
 (1, '1009998887', 'Juan David', 'Berrocal Sanchez', 'juan.berrocal@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3135556677', NULL, 'estudiante_investigador', 'pendiente', 0, 1, 0, NULL, '2026-08-20 18:00:00'),
-(4, '1005556664', 'Andrés Felipe', 'Castro León', 'andres.castro@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3146667788', 'Visitante de la plataforma.', 'visitante', 'activo', 0, 1, 0, NULL, '2026-08-21 10:00:00'),
-(2, '1004443332', 'Carolina', 'Mejía Torres', 'carolina.mejia@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3157778899', 'Interés en metodologías cualitativas.', 'estudiante_investigador', 'activo', 1760, 4, 3, 4, '2026-03-05 09:00:00'),
-(3, '1003332221', 'Diego Alonso', 'Patiño Ruiz', 'diego.patino@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3168889900', NULL, 'estudiante_investigador', 'activo', 1540, 3, 3, 5, '2026-03-12 11:00:00'),
-(1, '1002221110', 'Sofía', 'Hernández Díaz', 'sofia.hernandez@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3179990011', 'Semillero de software libre.', 'estudiante_investigador', 'activo', 1320, 3, 3, 6, '2026-04-02 14:00:00'),
-(2, '1001110009', 'Camilo', 'Ortega Vela', 'camilo.ortega@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3180001122', NULL, 'estudiante_investigador', 'pendiente', 0, 1, 0, NULL, '2026-08-22 16:30:00');
-
+(2, '1004443332', 'Carolina', 'Mejía Torres', 'carolina.mejia@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3157778899', 'Interés en metodologías cualitativas.', 'estudiante_investigador', 'activo', 1760, 4, 3, 3, '2026-03-05 09:00:00'),
+(3, '1003332221', 'Diego Alonso', 'Patiño Ruiz', 'diego.patino@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3168889900', NULL, 'estudiante_investigador', 'activo', 1540, 3, 3, 4, '2026-03-12 11:00:00'),
+(1, '1002221110', 'Sofía', 'Hernández Díaz', 'sofia.hernandez@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3179990011', 'Semillero de software libre.', 'estudiante_investigador', 'activo', 1320, 3, 3, 5, '2026-04-02 14:00:00'),
+(2, '1001110009', 'Camilo', 'Ortega Vela', 'camilo.ortega@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3180001122', NULL, 'estudiante_investigador', 'pendiente', 0, 1, 0, NULL, '2026-08-22 16:30:00'),
+(4, '1005556664', 'Andrés Felipe', 'Castro León', 'andres.castro@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3146667788', 'Visitante de la plataforma.', 'visitante', 'activo', 0, 1, 0, NULL, '2026-08-21 10:00:00');
 -- RF-04 Solicitudes de registro pendientes
 INSERT INTO solicitudes_registro (usuario_id, motivacion, estado, fecha_solicitud) VALUES
 (5, 'Estudiante de ingeniería de sistemas interesado en participar en el semillero de inteligencia artificial.', 'pendiente', '2026-08-20 18:05:00'),
@@ -97,9 +95,9 @@ INSERT INTO eventos (organizador_id, nombre, descripcion, tipo, modalidad, lugar
 
 -- Participaciones (RF-16)
 INSERT INTO participaciones_evento (evento_id, usuario_id, semillero_id, estado, fecha_inscripcion) VALUES
-(1, 1, 1, 'confirmado', '2026-08-25 10:00:00'),
+(1, 1, 1, 'inscrito', '2026-08-25 10:00:00'),
 (1, 2, 1, 'confirmado', '2026-08-25 10:10:00'),
-(2, 6, 2, 'inscrito', '2026-08-26 11:00:00'),
+(2, 1, 1, 'confirmado', '2026-08-26 11:00:00'),
 (3, 7, NULL, 'inscrito', '2026-08-27 12:00:00'),
 (4, 1, 1, 'asistio', '2026-07-01 08:00:00'),
 (4, 8, 1, 'asistio', '2026-07-01 08:30:00');
@@ -150,18 +148,26 @@ INSERT INTO logros (usuario_id, semillero_id, tipo, titulo, descripcion, evidenc
 (1, 1, 'evento', 'Asistencia al seminario de metodologías mixtas', 'Participación certificada en el seminario virtual.', '/evidencias/cert-seminario.pdf', 'aprobado', 4, 150, '2026-07-10 17:30:00', '2026-07-12 09:00:00'),
 (1, 1, 'publicacion', 'Ponencia: IA y evaluación formativa', 'Ponencia presentada en el seminario de innovación.', '/evidencias/ponencia.pdf', 'aprobado', 4, 300, '2026-06-10 18:00:00', '2026-06-12 10:00:00'),
 (2, 1, 'producto', 'Prototipo interactivo RIUL', 'Prototipo de las 10 pantallas del sistema para el primer corte.', '/evidencias/prototipo.zip', 'aprobado', 4, 250, '2026-08-24 16:00:00', '2026-08-25 08:00:00'),
-(2, 1, 'actividad', 'Levantamiento de requerimientos', 'Participación en la elaboración del documento de requerimientos.', NULL, 'pendiente', NULL, 0, '2026-08-26 09:00:00', NULL),
+(1, 1, 'actividad', 'Levantamiento de requerimientos', 'Participación en la elaboración del documento de requerimientos.', NULL, 'pendiente', NULL, 0, '2026-08-26 09:00:00', NULL),
 (7, 1, 'proyecto', 'Encuesta de software libre', 'Aplicación de la encuesta a 120 estudiantes.', '/evidencias/encuesta.xlsx', 'pendiente', NULL, 0, '2026-08-27 10:00:00', NULL),
-(8, 1, 'otro', 'Certificado de asistencia duplicado', 'Registro duplicado del seminario.', NULL, 'rechazado', 4, 0, '2026-07-11 10:00:00', '2026-07-13 11:00:00');
+(1, 1, 'otro', 'Certificado de asistencia duplicado', 'Registro duplicado del seminario.', NULL, 'rechazado', 4, 0, '2026-07-11 10:00:00', '2026-07-13 11:00:00');
 
 -- RF-22 Movimientos de XP
-INSERT INTO movimientos_experiencia (usuario_id, logro_id, concepto, puntos, fecha) VALUES
-(1, 1, 'Logro validado: seminario de metodologías mixtas', 150, '2026-07-12 09:00:00'),
-(1, 2, 'Logro validado: ponencia IA', 300, '2026-06-12 10:00:00'),
-(1, NULL, 'Participación en proyecto activo', 400, '2026-08-01 08:00:00'),
-(2, 3, 'Logro validado: prototipo interactivo', 250, '2026-08-25 08:00:00'),
-(2, NULL, 'Participación en proyecto activo', 350, '2026-08-01 08:00:00'),
-(3, NULL, 'Liderazgo de semillero', 500, '2026-08-01 08:00:00');
+INSERT INTO movimientos_experiencia (usuario_id, logro_id, evento_id, concepto, puntos, fecha) VALUES
+(1, 1, NULL, 'Logro validado: seminario de metodologías mixtas', 150, '2026-07-12 09:00:00'),
+(1, 2, NULL, 'Logro validado: ponencia IA', 300, '2026-06-12 10:00:00'),
+(1, NULL, NULL, 'Participación en proyecto activo', 400, '2026-08-01 08:00:00'),
+(1, NULL, 1, 'Inscripción a Semilleros en acción', 100, '2026-08-25 10:00:00'),
+(1, NULL, NULL, 'Participación sostenida en el semillero (acumulado)', 1500, '2026-08-01 08:00:00'),
+(2, 3, NULL, 'Logro validado: prototipo interactivo', 250, '2026-08-25 08:00:00'),
+(2, NULL, NULL, 'Participación en proyecto activo', 350, '2026-08-01 08:00:00'),
+(2, NULL, NULL, 'Participación sostenida en el semillero (acumulado)', 1580, '2026-08-01 08:00:00'),
+(3, NULL, NULL, 'Liderazgo de semillero', 500, '2026-08-01 08:00:00'),
+(3, NULL, NULL, 'Participación sostenida (acumulado)', 2620, '2026-08-01 08:00:00'),
+(4, NULL, NULL, 'Gestión administrativa de la plataforma', 900, '2026-08-01 08:00:00'),
+(6, NULL, NULL, 'Participación sostenida (acumulado)', 1760, '2026-08-01 08:00:00'),
+(7, NULL, NULL, 'Participación sostenida (acumulado)', 1540, '2026-08-01 08:00:00'),
+(8, NULL, NULL, 'Participación sostenida (acumulado)', 1320, '2026-08-01 08:00:00');
 
 -- RF-23 Insignias y otorgamientos
 INSERT INTO insignias (nombre, descripcion, icono, categoria) VALUES
@@ -183,7 +189,7 @@ INSERT INTO insignias_usuario (usuario_id, insignia_id, logro_id, fecha_otorgada
 -- RF-25 Niveles y RF-24 criterios
 INSERT INTO niveles (nivel, nombre, xp_requerido) VALUES
 (1, 'Novato', 0), (2, 'Aprendiz', 500), (3, 'Explorador', 1000),
-(4, 'Investigador', 1700), (5, 'Avanzado', 2500), (6, 'Experto', 3200),
+(4, 'Investigador', 1700), (5, 'Avanzado', 2400), (6, 'Experto', 3200),
 (7, 'Maestro', 4500), (8, 'Embajador RIUL', 6000);
 
 INSERT INTO criterios_progresion (ambito, estrellas_min, nivel_min, xp_minima, descripcion) VALUES
@@ -204,12 +210,13 @@ INSERT INTO bitacora_acciones (usuario_id, accion, entidad, entidad_id, detalle,
 (4, 'APROBAR_SOLICITUD', 'solicitudes_registro', 1, 'Aprobación de cuenta de María Duque', '2026-02-01 08:05:00'),
 (4, 'VALIDAR_LOGRO', 'logros', 1, 'Logro aprobado con 150 XP', '2026-07-12 09:00:00'),
 (3, 'APROBAR_INTEGRANTE', 'semillero_integrantes', 2, 'Vinculación de María Duque al semillero RIUL', '2026-02-03 10:00:00'),
-(4, 'PUBLICAR_CONVOCATORIA', 'convocatorias', 1, 'Convocatoria Semilleros XL 2026', '2026-08-01 08:00:00');
+(4, 'PUBLICAR_CONVOCATORIA', 'convocatorias', 1, 'Convocatoria Semilleros XL 2026', '2026-08-01 08:00:00'),
+(4, 'VALIDAR_LOGRO', 'logros', 3, 'Logro aprobado con 250 XP', '2026-08-25 08:00:00');
 
 -- RF-19 Notificaciones
 INSERT INTO notificaciones (usuario_id, tipo, titulo, mensaje, enlace, leida, fecha) VALUES
 (1, 'validacion', 'Logro aprobado', 'Tu logro "Ponencia: IA y evaluación formativa" fue aprobado y otorgó 300 XP.', 'logros.html', TRUE, '2026-06-12 10:00:00'),
 (3, 'solicitud', 'Nueva solicitud de vinculación', 'Juan David Berrocal solicitó ingresar al semillero RIUL - Innovación Educativa.', 'semilleros.html', FALSE, '2026-08-21 19:00:00'),
 (4, 'validacion', 'Logros pendientes por validar', 'Hay 2 logros esperando revisión.', 'admin.html', FALSE, '2026-08-27 10:05:00'),
-(2, 'convocatoria', 'Convocatoria abierta', 'Semilleros XL 2026 está abierta hasta el 30 de septiembre.', 'eventos.html', FALSE, '2026-08-01 08:00:00'),
-(6, 'evento', 'Recordatorio de evento', 'Taller de escritura científica inicia el 3 de octubre.', 'eventos.html', FALSE, '2026-09-30 08:00:00');
+(1, 'convocatoria', 'Convocatoria abierta', 'Semilleros XL 2026 está abierta hasta el 30 de septiembre.', 'eventos.html', TRUE, '2026-08-01 08:00:00'),
+(1, 'evento', 'Recordatorio de evento', 'Taller de escritura científica inicia el 3 de octubre.', 'eventos.html', TRUE, '2026-09-30 08:00:00');
