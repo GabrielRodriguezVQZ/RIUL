@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Semilleros de investigación en RIUL: búsqueda, vinculación y gestión de integrantes.">
+    <title>Semilleros · RIUL</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="contenedor">
+            <span>Universidad Libre · Sistema de Investigación RIUL</span>
+            <span>Sesión: María Duque · Estudiante investigador</span>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="contenedor">
+            <a class="logo" href="index.html">
+                <span class="escudo">RIUL</span>
+                <span><strong>RIUL</strong><small>Red de Investigación · Universidad Libre</small></span>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="semilleros.html" class="activo">Semilleros</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="publicaciones.html">Publicaciones</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="logros.html">Logros</a>
+                <a href="perfil.html">Perfil</a>
+                <a href="admin.html">Panel Admin</a>
+                <a href="login.html">Salir</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pagina">
+        <div class="migas contenedor"><a href="index.html">Inicio</a> › <a href="dashboard.html">Dashboard</a> › Semilleros</div>
+
+        <!-- RF-07 búsqueda · RF-08 solicitud de vinculación · RF-10 gestión -->
+        <section class="contenedor encabezado-pagina">
+            <div class="cabecera-tarjeta">
+                <div>
+                    <h1>Semilleros de investigación</h1>
+                    <p>Busca semilleros, solicita tu vinculación y consulta su progreso investigativo (RF-07, RF-18).</p>
+                </div>
+                <button class="btn btn-primario">+ Crear semillero</button>
+            </div>
+        </section>
+
+        <!-- Buscador -->
+        <section class="contenedor tarjeta plana" style="margin-bottom:1.2rem;">
+            <form class="formulario-fila" style="grid-template-columns:2fr 1fr 1fr auto;align-items:end;">
+                <div class="campo" style="margin-bottom:0;">
+                    <label for="q">Buscar por nombre o línea de investigación</label>
+                    <input type="search" id="q" placeholder="Ej. inteligencia artificial, salud…">
+                </div>
+                <div class="campo" style="margin-bottom:0;">
+                    <label for="facultad">Facultad</label>
+                    <select id="facultad">
+                        <option>Todas</option>
+                        <option>Ingeniería</option>
+                        <option>Ciencias Sociales</option>
+                        <option>Salud</option>
+                        <option>Derecho</option>
+                    </select>
+                </div>
+                <div class="campo" style="margin-bottom:0;">
+                    <label for="estado">Estado</label>
+                    <select id="estado">
+                        <option>Todos</option>
+                        <option>Activo</option>
+                        <option>En formación</option>
+                        <option>Inactivo</option>
+                    </select>
+                </div>
+                <button class="btn btn-dorado">Buscar</button>
+            </form>
+        </section>
+
+        <div class="contenedor rejilla rejilla-lateral">
+
+            <div>
+                <div class="lista-elementos">
+
+                    <article class="elemento">
+                        <span class="avatar verde">SR</span>
+                        <div class="cuerpo">
+                            <div class="titulo">Semillero RIUL - Innovación Educativa</div>
+                            <p class="descripcion">Innovación pedagógica y uso de tecnologías en la educación. Líder: William Insignares Conde.</p>
+                            <div class="meta">
+                                <span>👥 5 integrantes</span>
+                                <span>📁 2 proyectos activos</span>
+                                <span>⭐ Nivel 7 · 5 estrellas</span>
+                                <span>XP 6.400</span>
+                            </div>
+                            <div style="margin-top:.55rem;display:flex;gap:.45rem;flex-wrap:wrap;">
+                                <span class="insignia verde">Activo</span>
+                                <span class="insignia">Innovación educativa</span>
+                                <span class="insignia morado">Siguiendo</span>
+                            </div>
+                        </div>
+                        <div class="acciones" style="flex-direction:column;">
+                            <a class="btn btn-secundario btn-mini" href="#">Ver detalle</a>
+                            <button class="btn btn-suave btn-mini">Dejar de seguir</button>
+                        </div>
+                    </article>
+
+                    <article class="elemento">
+                        <span class="avatar dorado">DC</span>
+                        <div class="cuerpo">
+                            <div class="titulo">Semillero Datos y Ciudadanía</div>
+                            <p class="descripcion">Investigación sobre datos abiertos, transparencia y participación ciudadana.</p>
+                            <div class="meta">
+                                <span>👥 2 integrantes</span>
+                                <span>📁 1 proyecto en planificación</span>
+                                <span>⭐ Nivel 5 · 4 estrellas</span>
+                                <span>XP 3.900</span>
+                            </div>
+                            <div style="margin-top:.55rem;display:flex;gap:.45rem;flex-wrap:wrap;">
+                                <span class="insignia verde">Activo</span>
+                                <span class="insignia">Datos abiertos</span>
+                            </div>
+                        </div>
+                        <div class="acciones" style="flex-direction:column;">
+                            <a class="btn btn-secundario btn-mini" href="#">Ver detalle</a>
+                            <button class="btn btn-dorado btn-mini">Solicitar vinculación</button>
+                        </div>
+                    </article>
+
+                    <article class="elemento">
+                        <span class="avatar morado">SC</span>
+                        <div class="cuerpo">
+                            <div class="titulo">Semillero Salud Comunitaria</div>
+                            <p class="descripcion">Problemáticas de salud pública desde el territorio. Líder: William Insignares Conde.</p>
+                            <div class="meta">
+                                <span>👥 1 aspirante</span>
+                                <span>📁 Sin proyectos</span>
+                                <span>⭐ Nivel 3 · 3 estrellas</span>
+                                <span>XP 1.200</span>
+                            </div>
+                            <div style="margin-top:.55rem;display:flex;gap:.45rem;flex-wrap:wrap;">
+                                <span class="insignia naranja">En formación</span>
+                                <span class="insignia">Salud pública</span>
+                            </div>
+                        </div>
+                        <div class="acciones" style="flex-direction:column;">
+                            <a class="btn btn-secundario btn-mini" href="#">Ver detalle</a>
+                            <button class="btn btn-dorado btn-mini">Solicitar vinculación</button>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- RF-09: gestión de integrantes (vista docente líder) -->
+                <section class="tarjeta" style="margin-top:1.2rem;">
+                    <div class="cabecera-tarjeta">
+                        <h2>Gestión de integrantes · solicitudes pendientes</h2>
+                        <span class="insignia naranja">1 esperando respuesta</span>
+                    </div>
+                    <div class="tabla-contenedor">
+                        <table class="tabla">
+                            <thead>
+                                <tr>
+                                    <th>Aspirante</th>
+                                    <th>Programa</th>
+                                    <th>Fecha solicitud</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Juan David Berrocal Sanchez</strong></td>
+                                    <td>Ingeniería de Sistemas</td>
+                                    <td>21 ago 2026</td>
+                                    <td><span class="insignia naranja">Solicitado</span></td>
+                                    <td>
+                                        <button class="btn btn-verde btn-mini">Aprobar</button>
+                                        <button class="btn btn-rojo btn-mini">Rechazar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>María Angel Duque Polo</strong></td>
+                                    <td>Ingeniería de Sistemas</td>
+                                    <td>2 feb 2026</td>
+                                    <td><span class="insignia verde">Aprobado</span></td>
+                                    <td><button class="btn btn-suave btn-mini">Ver ficha</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Camilo Ortega Vela</strong></td>
+                                    <td>Administración de Empresas</td>
+                                    <td>18 ago 2026</td>
+                                    <td><span class="insignia naranja">Solicitado</span></td>
+                                    <td>
+                                        <button class="btn btn-verde btn-mini">Aprobar</button>
+                                        <button class="btn btn-rojo btn-mini">Rechazar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="font-size:.78rem;color:var(--gris-500);margin-top:.6rem;">RF-09: el docente líder aprueba o rechaza las solicitudes de vinculación. Cada respuesta queda registrada con usuario y fecha (RNF-13).</p>
+                </section>
+            </div>
+
+            <aside>
+                <div class="caja-lateral" style="margin-bottom:1.2rem;">
+                    <h3>Mi semillero</h3>
+                    <p style="font-size:.87rem;color:var(--gris-700);margin-bottom:.7rem;"><strong>Semillero RIUL - Innovación Educativa</strong></p>
+                    <div class="progreso" style="margin-bottom:.4rem;"><span style="width:91%;"></span></div>
+                    <p style="font-size:.8rem;color:var(--gris-500);">6.400 / 7.000 XP para el Nivel 8</p>
+                    <div style="margin-top:.7rem;display:flex;gap:.4rem;flex-wrap:wrap;">
+                        <span class="insignia dorado">⭐ 5 estrellas</span>
+                        <span class="insignia verde">Nivel 7</span>
+                    </div>
+                    <a class="btn btn-secundario" href="proyectos.html" style="width:100%;justify-content:center;margin-top:.8rem;">Ver proyectos del semillero</a>
+                </div>
+
+                <div class="caja-lateral">
+                    <h3>Ranking de semilleros</h3>
+                    <div class="lista-elementos" style="gap:.5rem;">
+                        <div class="elemento" style="padding:.6rem .7rem;">
+                            <span class="avatar dorado" style="width:32px;height:32px;font-size:.78rem;">1</span>
+                            <div class="cuerpo"><div class="titulo" style="font-size:.87rem;">Semillero RIUL</div><span style="font-size:.76rem;color:var(--gris-500);">6.400 XP</span></div>
+                        </div>
+                        <div class="elemento" style="padding:.6rem .7rem;">
+                            <span class="avatar" style="width:32px;height:32px;font-size:.78rem;">2</span>
+                            <div class="cuerpo"><div class="titulo" style="font-size:.87rem;">Datos y Ciudadanía</div><span style="font-size:.76rem;color:var(--gris-500);">3.900 XP</span></div>
+                        </div>
+                        <div class="elemento" style="padding:.6rem .7rem;">
+                            <span class="avatar morado" style="width:32px;height:32px;font-size:.78rem;">3</span>
+                            <div class="cuerpo"><div class="titulo" style="font-size:.87rem;">Salud Comunitaria</div><span style="font-size:.76rem;color:var(--gris-500);">1.200 XP</span></div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div>
+                <h4>RIUL</h4>
+                <p style="font-size:.85rem;">Red de Investigación Universidad Libre.</p>
+            </div>
+            <div>
+                <h4>Módulos</h4>
+                <a href="semilleros.html">Semilleros</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="publicaciones.html">Publicaciones</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="logros.html">Logros e insignias</a>
+            </div>
+            <div>
+                <h4>Accesos</h4>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="perfil.html">Mi perfil</a>
+                <a href="login.html">Cerrar sesión</a>
+            </div>
+        </div>
+        <div class="legal">© 2026 Universidad Libre · Programación Web · Segundo corte</div>
+    </footer>
+
+</body>
+</html>

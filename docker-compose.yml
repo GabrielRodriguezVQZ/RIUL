@@ -1,0 +1,44 @@
+# =====================================================================
+# RIUL - Docker Compose
+# Servicios:
+#   web : interfaz HTML/CSS servida con Nginx  (http://localhost:8080)
+#   db  : MySQL 8.0 con schema.sql + seed.sql cargados automáticamente
+# =====================================================================
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: riul-web
+    ports:
+      - "8080:80"
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  db:
+    image: mysql:8.0
+    container_name: riul-db
+    environment:
+      MYSQL_ROOT_PASSWORD: riul2026
+      MYSQL_DATABASE: riul
+      MYSQL_USER: riul
+      MYSQL_PASSWORD: riul2026
+      TZ: America/Bogota
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./database/seed.sql:/docker-entrypoint-initdb.d/02-seed.sql:ro
+      - riul_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-priul2026"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  riul_data:

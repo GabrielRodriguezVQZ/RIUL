@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestión de proyectos de investigación, avances y productos en RIUL.">
+    <title>Proyectos · RIUL</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="contenedor">
+            <span>Universidad Libre · Sistema de Investigación RIUL</span>
+            <span>Sesión: María Duque · Estudiante investigador</span>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="contenedor">
+            <a class="logo" href="index.html">
+                <span class="escudo">RIUL</span>
+                <span><strong>RIUL</strong><small>Red de Investigación · Universidad Libre</small></span>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="semilleros.html">Semilleros</a>
+                <a href="proyectos.html" class="activo">Proyectos</a>
+                <a href="publicaciones.html">Publicaciones</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="logros.html">Logros</a>
+                <a href="perfil.html">Perfil</a>
+                <a href="admin.html">Panel Admin</a>
+                <a href="login.html">Salir</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pagina">
+        <div class="migas contenedor"><a href="index.html">Inicio</a> › <a href="dashboard.html">Dashboard</a> › Proyectos</div>
+
+        <!-- RF-11 gestión de proyectos -->
+        <section class="contenedor encabezado-pagina">
+            <div class="cabecera-tarjeta">
+                <div>
+                    <h1>Proyectos de investigación</h1>
+                    <p>Consulta y gestiona los proyectos del semillero, registra avances y asocia productos de investigación (RF-11, RF-12, RF-13).</p>
+                </div>
+                <button class="btn btn-primario">+ Nuevo proyecto</button>
+            </div>
+        </section>
+
+        <section class="contenedor rejilla rejilla-4" style="margin-bottom:1.3rem;">
+            <div class="tarjeta plana kpi">
+                <span class="icono">📁</span>
+                <div><div class="valor">4</div><div class="etiqueta">Proyectos totales</div></div>
+            </div>
+            <div class="tarjeta plana kpi verde">
+                <span class="icono">🚀</span>
+                <div><div class="valor">2</div><div class="etiqueta">En desarrollo</div></div>
+            </div>
+            <div class="tarjeta plana kpi dorado">
+                <span class="icono">📊</span>
+                <div><div class="valor">4</div><div class="etiqueta">Avances registrados</div></div>
+            </div>
+            <div class="tarjeta plana kpi naranja">
+                <span class="icono">📄</span>
+                <div><div class="valor">4</div><div class="etiqueta">Productos generados</div></div>
+            </div>
+        </section>
+
+        <div class="contenedor rejilla rejilla-lateral">
+
+            <div>
+                <!-- Listado de proyectos -->
+                <section class="tarjeta" style="margin-bottom:1.2rem;">
+                    <div class="cabecera-tarjeta">
+                        <h2>Proyectos</h2>
+                        <span class="insignia gris">Semillero RIUL - Innovación Educativa</span>
+                    </div>
+                    <div class="lista-elementos">
+
+                        <article class="elemento">
+                            <span class="avatar">PR</span>
+                            <div class="cuerpo">
+                                <div class="titulo">Plataforma RIUL: red de investigación universitaria</div>
+                                <p class="descripcion">Diseño e implementación de una plataforma para centralizar y visibilizar la actividad investigativa.</p>
+                                <div class="meta">
+                                    <span>👤 Responsable: William Insignares</span>
+                                    <span>🗓 Inicio: 1 feb 2026</span>
+                                    <span>🌱 Semillero RIUL</span>
+                                </div>
+                                <div style="margin-top:.55rem;">
+                                    <div class="progreso"><span style="width:60%;"></span></div>
+                                    <span style="font-size:.76rem;color:var(--gris-500);">Avance estimado: 60%</span>
+                                </div>
+                            </div>
+                            <div class="acciones" style="flex-direction:column;">
+                                <span class="insignia naranja">En desarrollo</span>
+                                <button class="btn btn-suave btn-mini">Registrar avance</button>
+                            </div>
+                        </article>
+
+                        <article class="elemento">
+                            <span class="avatar verde">IA</span>
+                            <div class="cuerpo">
+                                <div class="titulo">Inteligencia artificial aplicada a la evaluación académica</div>
+                                <p class="descripcion">Exploración de modelos de lenguaje para apoyar la evaluación formativa.</p>
+                                <div class="meta">
+                                    <span>👤 Responsable: María Duque</span>
+                                    <span>🗓 Inicio: 1 abr 2026</span>
+                                    <span>🌱 Semillero RIUL</span>
+                                </div>
+                                <div style="margin-top:.55rem;">
+                                    <div class="progreso"><span style="width:45%;"></span></div>
+                                    <span style="font-size:.76rem;color:var(--gris-500);">Avance estimado: 45%</span>
+                                </div>
+                            </div>
+                            <div class="acciones" style="flex-direction:column;">
+                                <span class="insignia naranja">En desarrollo</span>
+                                <button class="btn btn-suave btn-mini">Registrar avance</button>
+                            </div>
+                        </article>
+
+                        <article class="elemento">
+                            <span class="avatar dorado">DC</span>
+                            <div class="cuerpo">
+                                <div class="titulo">Comunidad de software libre en el aula</div>
+                                <p class="descripcion">Caracterización de la adopción de software libre en cursos de programación.</p>
+                                <div class="meta">
+                                    <span>👤 Responsable: Sofía Hernández</span>
+                                    <span>🗓 1 sep 2025 – 30 jun 2026</span>
+                                    <span>🌱 Semillero RIUL</span>
+                                </div>
+                                <div style="margin-top:.55rem;">
+                                    <div class="progreso"><span style="width:100%;"></span></div>
+                                    <span style="font-size:.76rem;color:var(--gris-500);">Avance estimado: 100%</span>
+                                </div>
+                            </div>
+                            <div class="acciones" style="flex-direction:column;">
+                                <span class="insignia verde">Finalizado</span>
+                                <button class="btn btn-suave btn-mini">Ver detalle</button>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+                <!-- RF-12 avances -->
+                <section class="tarjeta" style="margin-bottom:1.2rem;">
+                    <div class="cabecera-tarjeta">
+                        <h2>Avances recientes</h2>
+                        <button class="btn btn-secundario btn-mini">+ Registrar avance</button>
+                    </div>
+                    <div class="lista-elementos">
+                        <article class="elemento">
+                            <span class="avatar verde">✓</span>
+                            <div class="cuerpo">
+                                <div class="titulo">Levantamiento de requerimientos</div>
+                                <p class="descripcion">Se consolidó el documento con 33 RF y 15 RNF.</p>
+                                <div class="meta"><span>✍️ William Insignares</span><span>Plataforma RIUL</span><span>18 ago 2026</span></div>
+                            </div>
+                        </article>
+                        <article class="elemento">
+                            <span class="avatar verde">✓</span>
+                            <div class="cuerpo">
+                                <div class="titulo">Prototipo de interfaz</div>
+                                <p class="descripcion">Prototipo interactivo con 10 pantallas para el primer corte.</p>
+                                <div class="meta"><span>✍️ Gabriel Rodríguez</span><span>Plataforma RIUL</span><span>24 ago 2026</span></div>
+                            </div>
+                        </article>
+                        <article class="elemento">
+                            <span class="avatar">…</span>
+                            <div class="cuerpo">
+                                <div class="titulo">Revisión de literatura</div>
+                                <p class="descripcion">18 artículos revisados sobre evaluación formativa asistida por IA.</p>
+                                <div class="meta"><span>✍️ María Duque</span><span>Proyecto IA</span><span>12 may 2026</span></div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- RF-13 productos -->
+                <section class="tarjeta">
+                    <div class="cabecera-tarjeta"><h2>Productos de investigación</h2><button class="btn btn-secundario btn-mini">+ Registrar producto</button></div>
+                    <div class="tabla-contenedor">
+                        <table class="tabla">
+                            <thead>
+                                <tr><th>Tipo</th><th>Título</th><th>Asociado a</th><th>Fecha</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><span class="insignia">Artículo</span></td><td>RIUL: una arquitectura para visibilizar la investigación universitaria</td><td>Proyecto Plataforma RIUL</td><td>15 jul 2026</td></tr>
+                                <tr><td><span class="insignia morado">Ponencia</span></td><td>IA y evaluación formativa: una revisión sistemática</td><td>María Duque</td><td>10 jun 2026</td></tr>
+                                <tr><td><span class="insignia gris">Informe</span></td><td>Radiografía de los portales de datos abiertos</td><td>Datos y Ciudadanía</td><td>30 may 2026</td></tr>
+                                <tr><td><span class="insignia verde">Software</span></td><td>Guía interactiva de software libre</td><td>Proyecto Software libre</td><td>30 jun 2026</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <aside>
+                <div class="caja-lateral" style="margin-bottom:1.2rem;">
+                    <h3>Crear proyecto</h3>
+                    <form>
+                        <div class="campo">
+                            <label for="titulo">Título</label>
+                            <input type="text" id="titulo" placeholder="Nombre del proyecto">
+                        </div>
+                        <div class="campo">
+                            <label for="semillero">Semillero</label>
+                            <select id="semillero">
+                                <option>Semillero RIUL - Innovación Educativa</option>
+                                <option>Datos y Ciudadanía</option>
+                                <option>Salud Comunitaria</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="estado">Estado inicial</label>
+                            <select id="estado">
+                                <option>Planificación</option>
+                                <option>En desarrollo</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="inicio">Fecha de inicio</label>
+                            <input type="date" id="inicio">
+                        </div>
+                        <div class="campo">
+                            <label for="desc">Descripción</label>
+                            <textarea id="desc" placeholder="Objetivo general del proyecto…"></textarea>
+                        </div>
+                        <button class="btn btn-primario" style="width:100%;justify-content:center;">Crear proyecto</button>
+                    </form>
+                </div>
+
+                <div class="caja-lateral">
+                    <h3>Estados posibles (RF-11)</h3>
+                    <div style="display:grid;gap:.5rem;">
+                        <span class="insignia gris">Planificación</span>
+                        <span class="insignia naranja">En desarrollo</span>
+                        <span class="insignia verde">Finalizado</span>
+                        <span class="insignia rojo">Suspendido</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div>
+                <h4>RIUL</h4>
+                <p style="font-size:.85rem;">Red de Investigación Universidad Libre.</p>
+            </div>
+            <div>
+                <h4>Módulos</h4>
+                <a href="semilleros.html">Semilleros</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="publicaciones.html">Publicaciones</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="logros.html">Logros e insignias</a>
+            </div>
+            <div>
+                <h4>Accesos</h4>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="perfil.html">Mi perfil</a>
+                <a href="login.html">Cerrar sesión</a>
+            </div>
+        </div>
+        <div class="legal">© 2026 Universidad Libre · Programación Web · Segundo corte</div>
+    </footer>
+
+</body>
+</html>

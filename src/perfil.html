@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Perfil de usuario y hoja de vida investigativa en RIUL.">
+    <title>Perfil · RIUL</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="contenedor">
+            <span>Universidad Libre · Sistema de Investigación RIUL</span>
+            <span>Sesión: María Duque · Estudiante investigador</span>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="contenedor">
+            <a class="logo" href="index.html">
+                <span class="escudo">RIUL</span>
+                <span><strong>RIUL</strong><small>Red de Investigación · Universidad Libre</small></span>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="semilleros.html">Semilleros</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="publicaciones.html">Publicaciones</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="logros.html">Logros</a>
+                <a href="perfil.html" class="activo">Perfil</a>
+                <a href="admin.html">Panel Admin</a>
+                <a href="login.html">Salir</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pagina">
+        <div class="migas contenedor"><a href="index.html">Inicio</a> › <a href="dashboard.html">Dashboard</a> › Perfil</div>
+
+        <!-- RF-06 Perfil de usuario -->
+        <section class="contenedor" style="margin-bottom:1.4rem;">
+            <div class="perfil-cabecera">
+                <div class="foto">MD</div>
+                <div>
+                    <h1>María Angel Duque Polo</h1>
+                    <p class="sub">Estudiante investigador · Ingeniería de Sistemas · Facultad de Ingeniería</p>
+                    <p class="sub" style="margin-top:.35rem;">🌱 Semillero RIUL - Innovación Educativa · 📧 maria.duque@unilibre.edu.co</p>
+                    <div style="margin-top:.6rem;display:flex;gap:.5rem;flex-wrap:wrap;">
+                        <span class="insignia dorado">⭐ Nivel 5 · 4 estrellas</span>
+                        <span class="insignia verde">Cuenta activa</span>
+                        <span class="insignia">#1 en ranking</span>
+                    </div>
+                </div>
+                <div class="estadisticas">
+                    <div><strong>2.450</strong><span>XP</span></div>
+                    <div><strong>3</strong><span>Insignias</span></div>
+                    <div><strong>2</strong><span>Logros</span></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="contenedor rejilla rejilla-lateral">
+
+            <div>
+                <!-- RF-27 Hoja de vida investigativa -->
+                <section class="tarjeta" style="margin-bottom:1.2rem;">
+                    <div class="cabecera-tarjeta">
+                        <h2>Hoja de vida investigativa</h2>
+                        <button class="btn btn-secundario btn-mini">Actualizar</button>
+                    </div>
+
+                    <div class="campo">
+                        <label for="resumen">Resumen profesional</label>
+                        <textarea id="resumen">Estudiante investigadora de ingeniería de sistemas con interés en inteligencia artificial aplicada a la educación.</textarea>
+                    </div>
+
+                    <div class="formulario-fila">
+                        <div class="campo">
+                            <label for="formacion">Formación</label>
+                            <textarea id="formacion" style="min-height:75px;">Ingeniería de Sistemas (en curso)</textarea>
+                        </div>
+                        <div class="campo">
+                            <label for="experiencia">Experiencia investigativa</label>
+                            <textarea id="experiencia" style="min-height:75px;">Integrante del semillero RIUL desde 2026</textarea>
+                        </div>
+                    </div>
+
+                    <div class="formulario-fila">
+                        <div class="campo">
+                            <label for="productos">Productos</label>
+                            <input type="text" id="productos" value="1 ponencia, 2 avances de proyecto">
+                        </div>
+                        <div class="campo">
+                            <label for="competencias">Competencias</label>
+                            <input type="text" id="competencias" value="Python, análisis de datos, redacción científica">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primario">Guardar cambios</button>
+                    <button class="btn btn-suave">Descargar en PDF</button>
+                </section>
+
+                <!-- Productos y participación -->
+                <section class="tarjeta">
+                    <div class="cabecera-tarjeta"><h2>Actividad investigativa</h2></div>
+                    <div class="pestanas">
+                        <a href="#" class="activo">Logros</a>
+                        <a href="#">Proyectos</a>
+                        <a href="#">Publicaciones</a>
+                        <a href="#">Eventos</a>
+                    </div>
+                    <div class="lista-elementos">
+                        <article class="elemento">
+                            <span class="avatar verde">✓</span>
+                            <div class="cuerpo">
+                                <div class="titulo">Ponencia: IA y evaluación formativa</div>
+                                <p class="descripcion">Logro validado · otorgó 300 XP</p>
+                                <div class="meta"><span>10 jun 2026</span><span class="insignia verde">Validado</span></div>
+                            </div>
+                        </article>
+                        <article class="elemento">
+                            <span class="avatar verde">✓</span>
+                            <div class="cuerpo">
+                                <div class="titulo">Asistencia al seminario de metodologías mixtas</div>
+                                <p class="descripcion">Logro validado · otorgó 150 XP</p>
+                                <div class="meta"><span>10 jul 2026</span><span class="insignia verde">Validado</span></div>
+                            </div>
+                        </article>
+                        <article class="elemento">
+                            <span class="avatar">📁</span>
+                            <div class="cuerpo">
+                                <div class="titulo">Proyecto: Plataforma RIUL</div>
+                                <p class="descripcion">Participación activa · en desarrollo</p>
+                                <div class="meta"><span>Desde feb 2026</span><span class="insignia">En desarrollo</span></div>
+                            </div>
+                        </article>
+                        <article class="elemento">
+                            <span class="avatar dorado">✍️</span>
+                            <div class="cuerpo">
+                                <div class="titulo">Revisión sistemática: IA y evaluación formativa</div>
+                                <p class="descripcion">Publicación en la comunidad · 289 vistas</p>
+                                <div class="meta"><span>12 ago 2026</span><span class="insignia">Artículo científico</span></div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <aside>
+                <div class="caja-lateral" style="margin-bottom:1.2rem;">
+                    <h3>Configuración del perfil</h3>
+                    <form>
+                        <div class="campo">
+                            <label for="tel">Teléfono</label>
+                            <input type="tel" id="tel" value="300 111 2233">
+                        </div>
+                        <div class="campo">
+                            <label for="bio">Biografía corta</label>
+                            <textarea id="bio" style="min-height:80px;">Interesada en inteligencia artificial aplicada.</textarea>
+                        </div>
+                        <div class="campo">
+                            <label for="foto">Foto de perfil</label>
+                            <input type="file" id="foto">
+                        </div>
+                        <button class="btn btn-primario" style="width:100%;justify-content:center;">Actualizar datos</button>
+                    </form>
+                </div>
+
+                <div class="caja-lateral">
+                    <h3>Insignias (RF-23)</h3>
+                    <div style="display:grid;gap:.55rem;">
+                        <span class="insignia dorado">🏅 Primera publicación · 12 ago 2026</span>
+                        <span class="insignia verde">✅ Validado · 12 jul 2026</span>
+                        <span class="insignia">⭐ Nivel 5 · 1 ago 2026</span>
+                        <span class="insignia gris">🔒 Cinco estrellas · bloqueada</span>
+                        <span class="insignia gris">🔒 Embajador RIUL · bloqueada</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div>
+                <h4>RIUL</h4>
+                <p style="font-size:.85rem;">Red de Investigación Universidad Libre.</p>
+            </div>
+            <div>
+                <h4>Módulos</h4>
+                <a href="semilleros.html">Semilleros</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="publicaciones.html">Publicaciones</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="logros.html">Logros e insignias</a>
+            </div>
+            <div>
+                <h4>Accesos</h4>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="admin.html">Panel administrativo</a>
+                <a href="login.html">Cerrar sesión</a>
+            </div>
+        </div>
+        <div class="legal">© 2026 Universidad Libre · Programación Web · Segundo corte</div>
+    </footer>
+
+</body>
+</html>

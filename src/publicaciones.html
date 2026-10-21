@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Publicaciones de la comunidad RIUL: crear, reaccionar, comentar y compartir.">
+    <title>Publicaciones · RIUL</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="contenedor">
+            <span>Universidad Libre · Sistema de Investigación RIUL</span>
+            <span>Sesión: María Duque · Estudiante investigador</span>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="contenedor">
+            <a class="logo" href="index.html">
+                <span class="escudo">RIUL</span>
+                <span><strong>RIUL</strong><small>Red de Investigación · Universidad Libre</small></span>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="semilleros.html">Semilleros</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="publicaciones.html" class="activo">Publicaciones</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="logros.html">Logros</a>
+                <a href="perfil.html">Perfil</a>
+                <a href="admin.html">Panel Admin</a>
+                <a href="login.html">Salir</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pagina">
+        <div class="migas contenedor"><a href="index.html">Inicio</a> › <a href="dashboard.html">Dashboard</a> › Publicaciones</div>
+
+        <!-- RF-14 crear publicación -->
+        <section class="contenedor encabezado-pagina">
+            <div class="cabecera-tarjeta">
+                <div>
+                    <h1>Publicaciones de la comunidad</h1>
+                    <p>Comparte productos, noticias y reflexiones investigativas. Reacciona, comenta y comparte (RF-14, RF-15).</p>
+                </div>
+                <button class="btn btn-primario">+ Nueva publicación</button>
+            </div>
+        </section>
+
+        <div class="contenedor rejilla rejilla-lateral">
+
+            <div>
+                <!-- Formulario de nueva publicación -->
+                <section class="tarjeta" style="margin-bottom:1.2rem;">
+                    <div class="cabecera-tarjeta"><h2>¿Qué quieres compartir?</h2></div>
+                    <form>
+                        <div class="formulario-fila">
+                            <div class="campo">
+                                <label for="cat">Categoría</label>
+                                <select id="cat">
+                                    <option>Artículo científico</option>
+                                    <option>Noticia de semillero</option>
+                                    <option>Convocatoria</option>
+                                    <option>Evento</option>
+                                    <option>Reflexión investigativa</option>
+                                    <option>Resultados de proyecto</option>
+                                </select>
+                            </div>
+                            <div class="campo">
+                                <label for="vis">Visibilidad</label>
+                                <select id="vis">
+                                    <option>Pública (visitantes)</option>
+                                    <option>Solo miembros</option>
+                                    <option>Borrador</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="campo">
+                            <label for="titulo-pub">Título</label>
+                            <input type="text" id="titulo-pub" placeholder="Título de la publicación">
+                        </div>
+                        <div class="campo">
+                            <label for="contenido">Contenido</label>
+                            <textarea id="contenido" placeholder="Escribe el contenido de tu publicación…"></textarea>
+                        </div>
+                        <div style="display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;">
+                            <button class="btn btn-primario" type="button">Publicar</button>
+                            <button class="btn btn-suave" type="button">Adjuntar evidencia</button>
+                            <button class="btn btn-suave" type="button">Guardar borrador</button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Listado de publicaciones -->
+                <div class="lista-elementos">
+
+                    <article class="elemento" style="flex-direction:column;align-items:stretch;">
+                        <div style="display:flex;gap:.9rem;">
+                            <span class="avatar verde">WI</span>
+                            <div class="cuerpo">
+                                <div style="display:flex;justify-content:space-between;gap:.8rem;flex-wrap:wrap;">
+                                    <div class="titulo">El semillero RIUL supera los 6.000 puntos de experiencia</div>
+                                    <span class="insignia">Noticia de semillero</span>
+                                </div>
+                                <p class="descripcion">Nuestro semillero alcanzó un nuevo nivel gracias a la validación de logros de sus integrantes. ¡Gracias a todos por su participación!</p>
+                                <div class="meta"><span>✍️ William Insignares</span><span>10 ago 2026</span><span>👁 342 vistas</span><span class="insignia verde">Pública</span></div>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:.5rem;margin-top:.7rem;padding-top:.7rem;border-top:1px solid var(--gris-100);flex-wrap:wrap;">
+                            <button class="btn btn-suave btn-mini">👍 Me gusta · 2</button>
+                            <button class="btn btn-suave btn-mini">✨ Me inspira</button>
+                            <button class="btn btn-suave btn-mini">💬 Comentarios · 1</button>
+                            <button class="btn btn-suave btn-mini">↗ Compartir</button>
+                        </div>
+                        <div style="margin-top:.6rem;background:var(--gris-50);border-radius:8px;padding:.6rem .75rem;font-size:.83rem;">
+                            <strong>Gabriel Rodríguez:</strong> ¡Gran logro del equipo! Sigue así.
+                        </div>
+                    </article>
+
+                    <article class="elemento" style="flex-direction:column;align-items:stretch;">
+                        <div style="display:flex;gap:.9rem;">
+                            <span class="avatar">MD</span>
+                            <div class="cuerpo">
+                                <div style="display:flex;justify-content:space-between;gap:.8rem;flex-wrap:wrap;">
+                                    <div class="titulo">Revisión sistemática: IA y evaluación formativa</div>
+                                    <span class="insignia verde">Artículo científico</span>
+                                </div>
+                                <p class="descripcion">Compartimos los resultados preliminares de la revisión de literatura realizada en el proyecto de investigación.</p>
+                                <p class="descripcion" style="font-size:.83rem;"><strong>📎 Adjunto:</strong> <a href="#">revision-ia.pdf</a></p>
+                                <div class="meta"><span>✍️ María Duque</span><span>12 ago 2026</span><span>👁 289 vistas</span><span class="insignia verde">Pública</span></div>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:.5rem;margin-top:.7rem;padding-top:.7rem;border-top:1px solid var(--gris-100);flex-wrap:wrap;">
+                            <button class="btn btn-suave btn-mini">👍 Me gusta · 2</button>
+                            <button class="btn btn-suave btn-mini">💬 Comentarios · 1</button>
+                            <button class="btn btn-suave btn-mini">↗ Compartir · 1</button>
+                        </div>
+                        <div style="margin-top:.6rem;background:var(--gris-50);border-radius:8px;padding:.6rem .75rem;font-size:.83rem;">
+                            <strong>William Insignares:</strong> Excelente avance, María. Incluye las referencias APA en la versión final.
+                        </div>
+                    </article>
+
+                    <article class="elemento" style="flex-direction:column;align-items:stretch;">
+                        <div style="display:flex;gap:.9rem;">
+                            <span class="avatar dorado">CM</span>
+                            <div class="cuerpo">
+                                <div style="display:flex;justify-content:space-between;gap:.8rem;flex-wrap:wrap;">
+                                    <div class="titulo">Convocatoria: Congreso de investigación estudiantil</div>
+                                    <span class="insignia dorado">Convocatoria</span>
+                                </div>
+                                <p class="descripcion">Ya está abierta la inscripción para el congreso. Postula tu proyecto antes del 30 de septiembre.</p>
+                                <div class="meta"><span>✍️ Carolina Mejía</span><span>14 ago 2026</span><span>👁 198 vistas</span><span class="insignia verde">Pública</span></div>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:.5rem;margin-top:.7rem;padding-top:.7rem;border-top:1px solid var(--gris-100);flex-wrap:wrap;">
+                            <button class="btn btn-suave btn-mini">👍 Me gusta · 1</button>
+                            <button class="btn btn-suave btn-mini">💬 Comentarios · 0</button>
+                            <button class="btn btn-suave btn-mini">↗ Compartir · 1</button>
+                        </div>
+                    </article>
+
+                    <article class="elemento" style="flex-direction:column;align-items:stretch;">
+                        <div style="display:flex;gap:.9rem;">
+                            <span class="avatar morado">SH</span>
+                            <div class="cuerpo">
+                                <div style="display:flex;justify-content:space-between;gap:.8rem;flex-wrap:wrap;">
+                                    <div class="titulo">¿Cómo validar logros por primera vez?</div>
+                                    <span class="insignia morado">Reflexión investigativa</span>
+                                </div>
+                                <p class="descripcion">Reflexión sobre el proceso de validación de logros y la asignación de XP en la plataforma.</p>
+                                <div class="meta"><span>✍️ Sofía Hernández</span><span>18 ago 2026</span><span>👁 64 vistas</span><span class="insignia naranja">Solo miembros</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <aside>
+                <div class="caja-lateral" style="margin-bottom:1.2rem;">
+                    <h3>Filtrar por categoría</h3>
+                    <div style="display:grid;gap:.5rem;">
+                        <a href="#" class="insignia" style="text-align:center;">Artículo científico · 1</a>
+                        <a href="#" class="insignia verde" style="text-align:center;">Noticia de semillero · 1</a>
+                        <a href="#" class="insignia dorado" style="text-align:center;">Convocatoria · 1</a>
+                        <a href="#" class="insignia morado" style="text-align:center;">Reflexión investigativa · 1</a>
+                        <a href="#" class="insignia gris" style="text-align:center;">Ver todas</a>
+                    </div>
+                </div>
+
+                <div class="caja-lateral" style="margin-bottom:1.2rem;">
+                    <h3>Estadísticas de impacto</h3>
+                    <p style="font-size:.8rem;color:var(--gris-500);margin-bottom:.8rem;">RF-33 · métricas de tus publicaciones</p>
+                    <div class="lista-elementos" style="gap:.55rem;">
+                        <div style="display:flex;justify-content:space-between;font-size:.85rem;"><span>👁 Vistas totales</span><strong>877</strong></div>
+                        <div style="display:flex;justify-content:space-between;font-size:.85rem;"><span>👍 Reacciones</span><strong>6</strong></div>
+                        <div style="display:flex;justify-content:space-between;font-size:.85rem;"><span>💬 Comentarios</span><strong>3</strong></div>
+                        <div style="display:flex;justify-content:space-between;font-size:.85rem;"><span>↗ Compartidos</span><strong>2</strong></div>
+                    </div>
+                    <div class="progreso" style="margin-top:.8rem;"><span style="width:72%;"></span></div>
+                    <p style="font-size:.76rem;color:var(--gris-500);margin-top:.3rem;">Índice de impacto: 72/100</p>
+                </div>
+
+                <div class="caja-lateral">
+                    <h3>Más vistos (RF-33)</h3>
+                    <div class="lista-elementos" style="gap:.5rem;">
+                        <div style="font-size:.84rem;">1. Plataforma RIUL supera 6.000 XP · <strong>342</strong></div>
+                        <div style="font-size:.84rem;">2. Revisión sistemática IA · <strong>289</strong></div>
+                        <div style="font-size:.84rem;">3. Congreso estudiantil · <strong>198</strong></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div>
+                <h4>RIUL</h4>
+                <p style="font-size:.85rem;">Red de Investigación Universidad Libre.</p>
+            </div>
+            <div>
+                <h4>Módulos</h4>
+                <a href="semilleros.html">Semilleros</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="publicaciones.html">Publicaciones</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="logros.html">Logros e insignias</a>
+            </div>
+            <div>
+                <h4>Accesos</h4>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="perfil.html">Mi perfil</a>
+                <a href="login.html">Cerrar sesión</a>
+            </div>
+        </div>
+        <div class="legal">© 2026 Universidad Libre · Programación Web · Segundo corte</div>
+    </footer>
+
+</body>
+</html>

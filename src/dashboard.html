@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard personal de RIUL adaptado al rol del usuario.">
+    <title>Dashboard · RIUL</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="contenedor">
+            <span>Universidad Libre · Sistema de Investigación RIUL</span>
+            <span>Sesión: María Duque · Estudiante investigador</span>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="contenedor">
+            <a class="logo" href="index.html">
+                <span class="escudo">RIUL</span>
+                <span><strong>RIUL</strong><small>Red de Investigación · Universidad Libre</small></span>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="dashboard.html" class="activo">Dashboard</a>
+                <a href="semilleros.html">Semilleros</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="publicaciones.html">Publicaciones</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="logros.html">Logros</a>
+                <a href="perfil.html">Perfil</a>
+                <a href="admin.html">Panel Admin</a>
+                <a href="login.html">Salir</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pagina">
+        <div class="migas contenedor"><a href="index.html">Inicio</a> › Dashboard</div>
+
+        <section class="contenedor encabezado-pagina">
+            <h1>Hola, María Angel 👋</h1>
+            <p>Resumen de tu actividad investigativa y de la comunidad RIUL (RF-31: dashboard adaptado al rol).</p>
+        </section>
+
+        <!-- Indicadores personales -->
+        <section class="contenedor rejilla rejilla-4" style="margin-bottom:1.4rem;">
+            <div class="tarjeta plana kpi dorado">
+                <span class="icono">⭐</span>
+                <div><div class="valor">2.450</div><div class="etiqueta">Puntos de experiencia (XP)</div></div>
+            </div>
+            <div class="tarjeta plana kpi">
+                <span class="icono">🎖️</span>
+                <div><div class="valor">Nivel 5</div><div class="etiqueta">Investigador avanzado</div></div>
+            </div>
+            <div class="tarjeta plana kpi verde">
+                <span class="icono">🏅</span>
+                <div><div class="valor">3</div><div class="etiqueta">Insignias obtenidas</div></div>
+            </div>
+            <div class="tarjeta plana kpi naranja">
+                <span class="icono">📈</span>
+                <div><div class="valor">#1</div><div class="etiqueta">Posición en el ranking</div></div>
+            </div>
+        </section>
+
+        <div class="contenedor rejilla rejilla-lateral">
+
+            <div>
+                <!-- Tareas pendientes -->
+                <section class="tarjeta" style="margin-bottom:1.2rem;">
+                    <div class="cabecera-tarjeta"><h2>Tus pendientes</h2></div>
+                    <div class="lista-elementos">
+                        <article class="elemento">
+                            <span class="avatar dorado">!</span>
+                            <div class="cuerpo">
+                                <div class="titulo">1 logro en validación</div>
+                                <p class="descripcion">"Levantamiento de requerimientos" fue enviado al administrador el 26 ago.</p>
+                            </div>
+                            <div class="acciones"><a class="btn btn-suave btn-mini" href="logros.html">Ver logros</a></div>
+                        </article>
+                        <article class="elemento">
+                            <span class="avatar verde">✓</span>
+                            <div class="cuerpo">
+                                <div class="titulo">Nueva solicitud de vinculación</div>
+                                <p class="descripcion">El semillero RIUL tiene 1 aspirante esperando respuesta del docente líder.</p>
+                            </div>
+                            <div class="acciones"><a class="btn btn-suave btn-mini" href="semilleros.html">Gestionar</a></div>
+                        </article>
+                        <article class="elemento">
+                            <span class="avatar morado">📅</span>
+                            <div class="cuerpo">
+                                <div class="titulo">Taller de escritura científica</div>
+                                <p class="descripcion">Inicia el 3 de octubre · tienes inscripción confirmada.</p>
+                            </div>
+                            <div class="acciones"><a class="btn btn-suave btn-mini" href="eventos.html">Ver evento</a></div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Progreso -->
+                <section class="tarjeta">
+                    <div class="cabecera-tarjeta"><h2>Progreso hacia el siguiente nivel</h2><span class="insignia dorado">2.450 / 3.200 XP</span></div>
+                    <div class="progreso" style="margin-bottom:.5rem;"><span style="width:76%;"></span></div>
+                    <p style="font-size:.83rem;color:var(--gris-500);">Te faltan <strong>750 XP</strong> para alcanzar el Nivel 6 (Experto).</p>
+
+                    <div style="display:flex;gap:.4rem;align-items:center;margin-top:1rem;">
+                        <strong style="font-size:.85rem;">Estrellas:</strong>
+                        <span class="estrellas">★★★★<span class="apagada">★</span></span>
+                        <span style="font-size:.8rem;color:var(--gris-500);">4 de 5</span>
+                    </div>
+
+                    <div style="margin-top:1.1rem;">
+                        <h3 style="margin-bottom:.6rem;">Insignias recientes</h3>
+                        <div style="display:flex;gap:.6rem;flex-wrap:wrap;">
+                            <span class="insignia dorado">🏅 Primera publicación</span>
+                            <span class="insignia verde">✅ Validado</span>
+                            <span class="insignia">⭐ Nivel 5</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <aside>
+                <div class="caja-lateral" style="margin-bottom:1.2rem;">
+                    <h3>Notificaciones</h3>
+                    <div class="notificacion">
+                        <span class="punto"></span>
+                        <div>
+                            <strong>Logro aprobado</strong>
+                            <p>"Ponencia: IA y evaluación formativa" otorgó 300 XP.</p>
+                            <time>12 jun 2026</time>
+                        </div>
+                    </div>
+                    <div class="notificacion leida">
+                        <span class="punto"></span>
+                        <div>
+                            <strong>Convocatoria abierta</strong>
+                            <p>Semilleros XL 2026 está abierta hasta el 30 de septiembre.</p>
+                            <time>1 ago 2026</time>
+                        </div>
+                    </div>
+                    <div class="notificacion leida">
+                        <span class="punto"></span>
+                        <div>
+                            <strong>Recordatorio de evento</strong>
+                            <p>Taller de escritura científica inicia el 3 de octubre.</p>
+                            <time>30 sep 2026</time>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="caja-lateral">
+                    <h3>Accesos rápidos</h3>
+                    <a class="btn btn-primario" href="logros.html" style="width:100%;justify-content:center;">Registrar logro</a>
+                    <a class="btn btn-secundario" href="publicaciones.html" style="width:100%;justify-content:center;margin-top:.5rem;">Crear publicación</a>
+                    <a class="btn btn-suave" href="perfil.html" style="width:100%;justify-content:center;margin-top:.5rem;">Actualizar hoja de vida</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div>
+                <h4>RIUL</h4>
+                <p style="font-size:.85rem;">Red de Investigación Universidad Libre.</p>
+            </div>
+            <div>
+                <h4>Módulos</h4>
+                <a href="semilleros.html">Semilleros</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="publicaciones.html">Publicaciones</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="logros.html">Logros e insignias</a>
+            </div>
+            <div>
+                <h4>Accesos</h4>
+                <a href="perfil.html">Mi perfil</a>
+                <a href="admin.html">Panel administrativo</a>
+                <a href="login.html">Cerrar sesión</a>
+            </div>
+        </div>
+        <div class="legal">© 2026 Universidad Libre · Programación Web · Segundo corte</div>
+    </footer>
+
+</body>
+</html>

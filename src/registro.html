@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registro de usuarios en RIUL - Red de Investigación Universidad Libre.">
+    <title>Registro · RIUL</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="contenedor">
+            <span>Universidad Libre · Sistema de Investigación RIUL</span>
+            <span>Solicitud de registro con validación institucional</span>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="contenedor">
+            <a class="logo" href="index.html">
+                <span class="escudo">RIUL</span>
+                <span><strong>RIUL</strong><small>Red de Investigación · Universidad Libre</small></span>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="login.html">Iniciar sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="acceso">
+        <!-- RF-02 Registro de usuarios · RF-04 validación de cuentas -->
+        <section class="panel-acceso ancho">
+            <div class="marca">
+                <div class="escudo">RIUL</div>
+                <h1 style="font-size:1.35rem;">Crear cuenta en RIUL</h1>
+                <p style="font-size:.85rem;color:var(--gris-500);">Tu solicitud será revisada por el administrador antes de ser activada</p>
+            </div>
+
+            <form action="login.html" method="get">
+                <div class="formulario-fila">
+                    <div class="campo">
+                        <label for="nombre">Nombres</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="María Angel" required>
+                    </div>
+                    <div class="campo">
+                        <label for="apellido">Apellidos</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Duque Polo" required>
+                    </div>
+                </div>
+
+                <div class="formulario-fila">
+                    <div class="campo">
+                        <label for="identificacion">Documento de identidad</label>
+                        <input type="text" id="identificacion" name="identificacion" placeholder="1001234567" required>
+                    </div>
+                    <div class="campo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="300 111 2233">
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="email">Correo institucional</label>
+                    <input type="email" id="email" name="email" placeholder="nombre@unilibre.edu.co" required>
+                </div>
+
+                <div class="formulario-fila">
+                    <div class="campo">
+                        <label for="programa">Facultad y programa</label>
+                        <select id="programa" name="programa" required>
+                            <option value="">Seleccione…</option>
+                            <option>Ingeniería de Sistemas</option>
+                            <option>Ingeniería Industrial</option>
+                            <option>Psicología</option>
+                            <option>Administración de Empresas</option>
+                            <option>Enfermería</option>
+                            <option>Derecho</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="rol">Rol solicitado</label>
+                        <select id="rol" name="rol" required>
+                            <option value="">Seleccione…</option>
+                            <option>Estudiante investigador</option>
+                            <option>Docente líder</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="formulario-fila">
+                    <div class="campo">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres" required>
+                    </div>
+                    <div class="campo">
+                        <label for="password2">Confirmar contraseña</label>
+                        <input type="password" id="password2" name="password2" placeholder="Repite la contraseña" required>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="motivacion">Motivación para unirse a RIUL</label>
+                    <textarea id="motivacion" name="motivacion" placeholder="Cuéntanos brevemente tu interés investigativo…"></textarea>
+                    <small>Esta información apoya la revisión institucional de tu solicitud (RF-04).</small>
+                </div>
+
+                <div class="campo">
+                    <label style="display:flex;align-items:flex-start;gap:.5rem;font-weight:400;">
+                        <input type="checkbox" style="width:auto;margin-top:.25rem;">
+                        Acepto el tratamiento de mis datos personales conforme a las políticas institucionales (RNF-03).
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primario" style="width:100%;justify-content:center;">Enviar solicitud de registro</button>
+            </form>
+
+            <p class="alternar">¿Ya tienes cuenta? <a href="login.html"><strong>Inicia sesión</strong></a></p>
+            <p class="alternar" style="margin-top:.3rem;"><a href="index.html">← Volver al inicio público</a></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="legal">© 2026 Universidad Libre · Programación Web · Segundo corte</div>
+    </footer>
+
+</body>
+</html>

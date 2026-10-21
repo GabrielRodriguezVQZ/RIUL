@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panel de administración de RIUL: usuarios, validaciones, institucional, reportes e indicadores.">
+    <title>Panel de administración · RIUL</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="contenedor">
+            <span>Universidad Libre · Sistema de Investigación RIUL</span>
+            <span>Sesión: Laura Gómez · Administrador</span>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="contenedor">
+            <a class="logo" href="index.html">
+                <span class="escudo">RIUL</span>
+                <span><strong>RIUL</strong><small>Red de Investigación · Universidad Libre</small></span>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="semilleros.html">Semilleros</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="publicaciones.html">Publicaciones</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="logros.html">Logros</a>
+                <a href="perfil.html">Perfil</a>
+                <a href="admin.html" class="activo">Panel Admin</a>
+                <a href="login.html">Salir</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pagina">
+        <div class="migas contenedor"><a href="index.html">Inicio</a> › <a href="dashboard.html">Dashboard</a> › Panel de administración</div>
+
+        <!-- RF-28, RF-29, RF-30, RF-32 -->
+        <section class="contenedor encabezado-pagina">
+            <div class="cabecera-tarjeta">
+                <div>
+                    <h1>Panel de administración</h1>
+                    <p>Gestión de usuarios, validaciones, información institucional, semilleros, logros y reportes (RF-04, RF-28 a RF-32).</p>
+                </div>
+                <button class="btn btn-dorado">📊 Generar reporte</button>
+            </div>
+        </section>
+
+        <!-- Indicadores globales -->
+        <section class="contenedor rejilla rejilla-4" style="margin-bottom:1.3rem;">
+            <div class="tarjeta plana kpi">
+                <span class="icono">👥</span>
+                <div><div class="valor">7</div><div class="etiqueta">Usuarios activos</div></div>
+            </div>
+            <div class="tarjeta plana kpi naranja">
+                <span class="icono">⏳</span>
+                <div><div class="valor">2</div><div class="etiqueta">Solicitudes pendientes</div></div>
+            </div>
+            <div class="tarjeta plana kpi verde">
+                <span class="icono">🌱</span>
+                <div><div class="valor">2</div><div class="etiqueta">Semilleros activos</div></div>
+            </div>
+            <div class="tarjeta plana kpi dorado">
+                <span class="icono">✅</span>
+                <div><div class="valor">2</div><div class="etiqueta">Logros por validar</div></div>
+            </div>
+        </section>
+
+        <div class="contenedor">
+            <div class="pestanas">
+                <a href="#" class="activo">Validaciones</a>
+                <a href="#">Usuarios</a>
+                <a href="#">Institución</a>
+                <a href="#">Semilleros</a>
+                <a href="#">Reportes e indicadores</a>
+                <a href="#">Bitácora</a>
+            </div>
+        </div>
+
+        <div class="contenedor rejilla rejilla-lateral">
+
+            <div>
+                <!-- RF-04 Validación de cuentas -->
+                <section class="tarjeta" style="margin-bottom:1.2rem;">
+                    <div class="cabecera-tarjeta">
+                        <h2>Solicitudes de registro pendientes</h2>
+                        <span class="insignia naranja">2 pendientes</span>
+                    </div>
+                    <div class="tabla-contenedor">
+                        <table class="tabla">
+                            <thead>
+                                <tr><th>Solicitante</th><th>Programa</th><th>Rol</th><th>Fecha</th><th>Acción</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Juan David Berrocal Sanchez</strong><br><span style="font-size:.76rem;color:var(--gris-500);">juan.berrocal@unilibre.edu.co</span></td>
+                                    <td>Ingeniería de Sistemas</td>
+                                    <td><span class="insignia">Estudiante</span></td>
+                                    <td>20 ago 2026</td>
+                                    <td>
+                                        <button class="btn btn-verde btn-mini">Aprobar</button>
+                                        <button class="btn btn-rojo btn-mini">Rechazar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Camilo Ortega Vela</strong><br><span style="font-size:.76rem;color:var(--gris-500);">camilo.ortega@unilibre.edu.co</span></td>
+                                    <td>Administración de Empresas</td>
+                                    <td><span class="insignia">Estudiante</span></td>
+                                    <td>22 ago 2026</td>
+                                    <td>
+                                        <button class="btn btn-verde btn-mini">Aprobar</button>
+                                        <button class="btn btn-rojo btn-mini">Rechazar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="font-size:.78rem;color:var(--gris-500);margin-top:.6rem;">Cada aprobación o rechazo queda registrado en la bitácora con usuario, fecha y observación (RNF-13).</p>
+                </section>
+
+                <!-- RF-21 Validación de logros -->
+                <section class="tarjeta" style="margin-bottom:1.2rem;">
+                    <div class="cabecera-tarjeta">
+                        <h2>Logros por validar</h2>
+                        <span class="insignia naranja">2 en espera</span>
+                    </div>
+                    <div class="lista-elementos">
+                        <article class="elemento">
+                            <span class="avatar dorado">GR</span>
+                            <div class="cuerpo">
+                                <div class="titulo">Levantamiento de requerimientos · Gabriel Rodríguez</div>
+                                <p class="descripcion">Participación en la elaboración del documento de requerimientos.</p>
+                                <div class="meta"><span>🏷 Actividad</span><span>📅 26 ago 2026</span><span>📎 Sin evidencia adjunta</span></div>
+                            </div>
+                            <div class="acciones" style="flex-direction:column;">
+                                <button class="btn btn-verde btn-mini">Aprobar (+150 XP)</button>
+                                <button class="btn btn-rojo btn-mini">Rechazar</button>
+                            </div>
+                        </article>
+                        <article class="elemento">
+                            <span class="avatar dorado">DP</span>
+                            <div class="cuerpo">
+                                <div class="titulo">Encuesta de software libre · Diego Patiño</div>
+                                <p class="descripcion">Aplicación de la encuesta a 120 estudiantes.</p>
+                                <div class="meta"><span>🏷 Proyecto</span><span>📅 27 ago 2026</span><span>📎 encuesta.xlsx</span></div>
+                            </div>
+                            <div class="acciones" style="flex-direction:column;">
+                                <button class="btn btn-verde btn-mini">Aprobar (+200 XP)</button>
+                                <button class="btn btn-rojo btn-mini">Rechazar</button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- RF-28 Administración de usuarios -->
+                <section class="tarjeta" style="margin-bottom:1.2rem;">
+                    <div class="cabecera-tarjeta">
+                        <h2>Usuarios registrados</h2>
+                        <input type="search" placeholder="Buscar usuario…" style="padding:.45rem .8rem;border:1px solid var(--gris-300);border-radius:8px;font-size:.84rem;">
+                    </div>
+                    <div class="tabla-contenedor">
+                        <table class="tabla">
+                            <thead>
+                                <tr><th>Usuario</th><th>Rol</th><th>Estado</th><th>XP</th><th>Registro</th><th>Acciones</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>María Angel Duque Polo</strong></td>
+                                    <td><span class="insignia">Estudiante</span></td>
+                                    <td><span class="insignia verde">Activo</span></td>
+                                    <td>2.450</td>
+                                    <td>1 feb 2026</td>
+                                    <td><button class="btn btn-suave btn-mini">Ver ficha</button> <button class="btn btn-rojo btn-mini">Suspender</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>William Ricardo Insignares Conde</strong></td>
+                                    <td><span class="insignia morado">Docente líder</span></td>
+                                    <td><span class="insignia verde">Activo</span></td>
+                                    <td>3.120</td>
+                                    <td>15 ene 2026</td>
+                                    <td><button class="btn btn-suave btn-mini">Ver ficha</button> <button class="btn btn-rojo btn-mini">Suspender</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Laura Marcela Gómez Ríos</strong></td>
+                                    <td><span class="insignia dorado">Administrador</span></td>
+                                    <td><span class="insignia verde">Activo</span></td>
+                                    <td>900</td>
+                                    <td>10 ene 2026</td>
+                                    <td><button class="btn btn-suave btn-mini">Ver ficha</button></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Andrés Felipe Castro León</strong></td>
+                                    <td><span class="insignia gris">Visitante</span></td>
+                                    <td><span class="insignia verde">Activo</span></td>
+                                    <td>0</td>
+                                    <td>21 ago 2026</td>
+                                    <td><button class="btn btn-suave btn-mini">Ver ficha</button> <button class="btn btn-rojo btn-mini">Suspender</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- RF-32 Reportes -->
+                <section class="tarjeta">
+                    <div class="cabecera-tarjeta"><h2>Reportes e indicadores</h2><span class="insignia">RF-32</span></div>
+                    <div class="tabla-contenedor">
+                        <table class="tabla">
+                            <thead>
+                                <tr><th>Reporte</th><th>Tipo</th><th>Fecha</th><th>Acción</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Impacto de publicaciones - Agosto 2026</td><td><span class="insignia">Impacto</span></td><td>31 ago 2026</td><td><button class="btn btn-suave btn-mini">Descargar</button></td></tr>
+                                <tr><td>Ranking de investigadores - Agosto 2026</td><td><span class="insignia dorado">Ranking</span></td><td>31 ago 2026</td><td><button class="btn btn-suave btn-mini">Descargar</button></td></tr>
+                                <tr><td>Semilleros activos por facultad</td><td><span class="insignia verde">Semilleros</span></td><td>31 ago 2026</td><td><button class="btn btn-suave btn-mini">Descargar</button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <aside>
+                <div class="caja-lateral" style="margin-bottom:1.2rem;">
+                    <h3>Administración institucional</h3>
+                    <p style="font-size:.8rem;color:var(--gris-500);margin-bottom:.7rem;">RF-29 · facultades y programas</p>
+                    <div style="display:grid;gap:.5rem;font-size:.85rem;">
+                        <div style="display:flex;justify-content:space-between;"><span>Facultad de Ingeniería</span><span class="insignia verde">2 programas</span></div>
+                        <div style="display:flex;justify-content:space-between;"><span>Facultad de Ciencias Sociales</span><span class="insignia verde">2 programas</span></div>
+                        <div style="display:flex;justify-content:space-between;"><span>Facultad de Salud</span><span class="insignia verde">1 programa</span></div>
+                        <div style="display:flex;justify-content:space-between;"><span>Facultad de Derecho</span><span class="insignia verde">1 programa</span></div>
+                    </div>
+                    <button class="btn btn-secundario" style="width:100%;justify-content:center;margin-top:.8rem;">+ Agregar facultad/programa</button>
+                </div>
+
+                <div class="caja-lateral" style="margin-bottom:1.2rem;">
+                    <h3>Indicadores globales</h3>
+                    <div style="display:grid;gap:.7rem;">
+                        <div>
+                            <div style="display:flex;justify-content:space-between;font-size:.82rem;"><span>Proyectos en desarrollo</span><strong>2</strong></div>
+                            <div class="progreso" style="margin-top:.25rem;"><span style="width:50%;"></span></div>
+                        </div>
+                        <div>
+                            <div style="display:flex;justify-content:space-between;font-size:.82rem;"><span>Logros aprobados</span><strong>3/6</strong></div>
+                            <div class="progreso" style="margin-top:.25rem;"><span style="width:50%;"></span></div>
+                        </div>
+                        <div>
+                            <div style="display:flex;justify-content:space-between;font-size:.82rem;"><span>Eventos programados</span><strong>3</strong></div>
+                            <div class="progreso" style="margin-top:.25rem;"><span style="width:75%;"></span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="caja-lateral">
+                    <h3>Bitácora reciente (RNF-13)</h3>
+                    <div class="notificacion" style="margin-bottom:.5rem;">
+                        <span class="punto"></span>
+                        <div>
+                            <strong>PUBLICAR_CONVOCATORIA</strong>
+                            <p>Convocatoria Semilleros XL 2026</p>
+                            <time>4 ago 2026 · Laura Gómez</time>
+                        </div>
+                    </div>
+                    <div class="notificacion leida" style="margin-bottom:.5rem;">
+                        <span class="punto"></span>
+                        <div>
+                            <strong>VALIDAR_LOGRO</strong>
+                            <p>Logro aprobado con 250 XP</p>
+                            <time>25 ago 2026 · Laura Gómez</time>
+                        </div>
+                    </div>
+                    <div class="notificacion leida">
+                        <span class="punto"></span>
+                        <div>
+                            <strong>APROBAR_INTEGRANTE</strong>
+                            <p>Vinculación al semillero RIUL</p>
+                            <time>3 feb 2026 · William Insignares</time>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div>
+                <h4>RIUL</h4>
+                <p style="font-size:.85rem;">Red de Investigación Universidad Libre.</p>
+            </div>
+            <div>
+                <h4>Módulos</h4>
+                <a href="semilleros.html">Semilleros</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="publicaciones.html">Publicaciones</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="logros.html">Logros e insignias</a>
+            </div>
+            <div>
+                <h4>Accesos</h4>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="perfil.html">Mi perfil</a>
+                <a href="login.html">Cerrar sesión</a>
+            </div>
+        </div>
+        <div class="legal">© 2026 Universidad Libre · Programación Web · Segundo corte</div>
+    </footer>
+
+</body>
+</html>

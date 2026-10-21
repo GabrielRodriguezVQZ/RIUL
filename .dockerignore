@@ -1,0 +1,5 @@
+# Excluir del contexto de construcción de la imagen Docker
+docs/
+database/
+*.md
+.git/

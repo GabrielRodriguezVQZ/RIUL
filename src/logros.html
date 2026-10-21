@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Logros, experiencia, insignias, estrellas, niveles y ranking en RIUL.">
+    <title>Logros y gamificación · RIUL</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="contenedor">
+            <span>Universidad Libre · Sistema de Investigación RIUL</span>
+            <span>Sesión: María Duque · Estudiante investigador</span>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="contenedor">
+            <a class="logo" href="index.html">
+                <span class="escudo">RIUL</span>
+                <span><strong>RIUL</strong><small>Red de Investigación · Universidad Libre</small></span>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="semilleros.html">Semilleros</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="publicaciones.html">Publicaciones</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="logros.html" class="activo">Logros</a>
+                <a href="perfil.html">Perfil</a>
+                <a href="admin.html">Panel Admin</a>
+                <a href="login.html">Salir</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pagina">
+        <div class="migas contenedor"><a href="index.html">Inicio</a> › <a href="dashboard.html">Dashboard</a> › Logros</div>
+
+        <!-- RF-20 a RF-26 -->
+        <section class="contenedor encabezado-pagina">
+            <div class="cabecera-tarjeta">
+                <div>
+                    <h1>Logros y progresión</h1>
+                    <p>Registra tus logros con evidencia, sigue su validación y consulta tu experiencia, insignias, estrellas, nivel y ranking (RF-20 a RF-26).</p>
+                </div>
+                <button class="btn btn-primario">+ Registrar logro</button>
+            </div>
+        </section>
+
+        <!-- Resumen de progresión -->
+        <section class="contenedor rejilla rejilla-4" style="margin-bottom:1.3rem;">
+            <div class="tarjeta plana kpi dorado">
+                <span class="icono">⚡</span>
+                <div><div class="valor">2.450</div><div class="etiqueta">XP acumulada (RF-22)</div></div>
+            </div>
+            <div class="tarjeta plana kpi">
+                <span class="icono">🎖️</span>
+                <div><div class="valor">Nivel 5</div><div class="etiqueta">Investigador avanzado (RF-25)</div></div>
+            </div>
+            <div class="tarjeta plana kpi verde">
+                <span class="icono">⭐</span>
+                <div><div class="valor">4 / 5</div><div class="etiqueta">Estrellas (RF-24)</div></div>
+            </div>
+            <div class="tarjeta plana kpi naranja">
+                <span class="icono">🏆</span>
+                <div><div class="valor">#1</div><div class="etiqueta">Posición en ranking (RF-26)</div></div>
+            </div>
+        </section>
+
+        <div class="contenedor rejilla rejilla-lateral">
+
+            <div>
+                <!-- RF-20 Registrar logro -->
+                <section class="tarjeta" style="margin-bottom:1.2rem;">
+                    <div class="cabecera-tarjeta"><h2>Registrar un logro</h2><span class="insignia">RF-20</span></div>
+                    <form>
+                        <div class="formulario-fila">
+                            <div class="campo">
+                                <label for="tipo">Tipo de logro</label>
+                                <select id="tipo">
+                                    <option>Actividad</option>
+                                    <option>Producto</option>
+                                    <option>Evento</option>
+                                    <option>Publicación</option>
+                                    <option>Docencia</option>
+                                    <option>Proyecto</option>
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+                            <div class="campo">
+                                <label for="titulo-l">Título</label>
+                                <input type="text" id="titulo-l" placeholder="Ej. Asistencia a congreso 2026">
+                            </div>
+                        </div>
+                        <div class="campo">
+                            <label for="desc-l">Descripción</label>
+                            <textarea id="desc-l" placeholder="Describe la actividad o logro obtenido…"></textarea>
+                        </div>
+                        <div class="campo">
+                            <label for="evidencia">Evidencia (PDF, imagen o enlace)</label>
+                            <input type="file" id="evidencia">
+                            <small>La evidencia es obligatoria para la validación administrativa (RF-21).</small>
+                        </div>
+                        <div style="display:flex;gap:.6rem;flex-wrap:wrap;">
+                            <button class="btn btn-primario" type="button">Enviar a validación</button>
+                            <button class="btn btn-suave" type="button">Guardar borrador</button>
+                        </div>
+                        <p style="font-size:.79rem;color:var(--gris-500);margin-top:.7rem;">Al enviarse, el logro queda en estado <strong>Pendiente</strong> y se notifica al administrador para su aprobación o rechazo (RF-21). Solo los logros aprobados otorgan XP (RF-22).</p>
+                    </form>
+                </section>
+
+                <!-- Listado de logros -->
+                <section class="tarjeta" style="margin-bottom:1.2rem;">
+                    <div class="cabecera-tarjeta">
+                        <h2>Mis logros</h2>
+                        <div style="display:flex;gap:.4rem;">
+                            <span class="insignia verde">2 aprobados</span>
+                            <span class="insignia naranja">1 pendiente</span>
+                            <span class="insignia rojo">1 rechazado</span>
+                        </div>
+                    </div>
+                    <div class="lista-elementos">
+                        <article class="elemento">
+                            <span class="avatar verde">✓</span>
+                            <div class="cuerpo">
+                                <div style="display:flex;justify-content:space-between;gap:.6rem;flex-wrap:wrap;">
+                                    <div class="titulo">Ponencia: IA y evaluación formativa</div>
+                                    <span class="insignia verde">Aprobado · +300 XP</span>
+                                </div>
+                                <p class="descripcion">Ponencia presentada en el seminario de innovación. Validado por Laura Gómez.</p>
+                                <div class="meta"><span>🏷 Publicación</span><span>📅 10 jun 2026</span><span>📎 ponencia.pdf</span></div>
+                            </div>
+                        </article>
+                        <article class="elemento">
+                            <span class="avatar verde">✓</span>
+                            <div class="cuerpo">
+                                <div style="display:flex;justify-content:space-between;gap:.6rem;flex-wrap:wrap;">
+                                    <div class="titulo">Asistencia al seminario de metodologías mixtas</div>
+                                    <span class="insignia verde">Aprobado · +150 XP</span>
+                                </div>
+                                <p class="descripcion">Participación certificada en el seminario virtual. Validado por Laura Gómez.</p>
+                                <div class="meta"><span>🏷 Evento</span><span>📅 10 jul 2026</span><span>📎 cert-seminario.pdf</span></div>
+                            </div>
+                        </article>
+                        <article class="elemento">
+                            <span class="avatar dorado">…</span>
+                            <div class="cuerpo">
+                                <div style="display:flex;justify-content:space-between;gap:.6rem;flex-wrap:wrap;">
+                                    <div class="titulo">Levantamiento de requerimientos</div>
+                                    <span class="insignia naranja">Pendiente de validación</span>
+                                </div>
+                                <p class="descripcion">Enviado al administrador el 26 ago 2026. Recibirás una notificación al ser revisado.</p>
+                                <div class="meta"><span>🏷 Actividad</span><span>📅 26 ago 2026</span></div>
+                            </div>
+                        </article>
+                        <article class="elemento">
+                            <span class="avatar" style="background:var(--rojo);">✕</span>
+                            <div class="cuerpo">
+                                <div style="display:flex;justify-content:space-between;gap:.6rem;flex-wrap:wrap;">
+                                    <div class="titulo">Certificado de asistencia duplicado</div>
+                                    <span class="insignia rojo">Rechazado</span>
+                                </div>
+                                <p class="descripcion">Observación: registro duplicado del seminario ya validado.</p>
+                                <div class="meta"><span>🏷 Otro</span><span>📅 11 jul 2026</span></div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- RF-26 Ranking -->
+                <section class="tarjeta">
+                    <div class="cabecera-tarjeta">
+                        <h2>Ranking de investigadores</h2>
+                        <span class="insignia dorado">Actualizado ago 2026</span>
+                    </div>
+                    <div class="tabla-contenedor">
+                        <table class="tabla">
+                            <thead>
+                                <tr><th>#</th><th>Investigador</th><th>Rol</th><th>XP</th><th>Nivel</th><th>Estrellas</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr style="background:#fdf3d7;">
+                                    <td><strong>1</strong></td>
+                                    <td><strong>María Angel Duque Polo</strong> <span class="insignia dorado">Tú</span></td>
+                                    <td>Estudiante investigador</td>
+                                    <td><strong>2.450</strong></td>
+                                    <td>5</td>
+                                    <td><span class="estrellas">★★★★<span class="apagada">★</span></span></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Gabriel Enrique Rodríguez Vásquez</td>
+                                    <td>Estudiante investigador</td>
+                                    <td>2.180</td>
+                                    <td>4</td>
+                                    <td><span class="estrellas">★★★★<span class="apagada">★</span></span></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>William Ricardo Insignares Conde</td>
+                                    <td>Docente líder</td>
+                                    <td>3.120</td>
+                                    <td>6</td>
+                                    <td><span class="estrellas">★★★★★</span></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Carolina Mejía Torres</td>
+                                    <td>Estudiante investigador</td>
+                                    <td>1.760</td>
+                                    <td>4</td>
+                                    <td><span class="estrellas">★★★<span class="apagada">★★</span></span></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Diego Alonso Patiño Ruiz</td>
+                                    <td>Estudiante investigador</td>
+                                    <td>1.540</td>
+                                    <td>3</td>
+                                    <td><span class="estrellas">★★★<span class="apagada">★★</span></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <aside>
+                <div class="caja-lateral" style="margin-bottom:1.2rem;">
+                    <h3>Mi progreso</h3>
+                    <div class="nivel-caja" style="width:100%;justify-content:center;margin-bottom:.8rem;">
+                        <span class="numero">5</span> Nivel 5 · Investigador avanzado
+                    </div>
+                    <div class="progreso"><span style="width:76%;"></span></div>
+                    <p style="font-size:.79rem;color:var(--gris-500);margin-top:.35rem;">2.450 / 3.200 XP · faltan 750 XP</p>
+                    <div style="margin-top:.9rem;">
+                        <strong style="font-size:.84rem;">Estrellas (RF-24)</strong>
+                        <div class="estrellas" style="font-size:1.25rem;margin-top:.2rem;">★★★★<span class="apagada">★</span></div>
+                        <p style="font-size:.77rem;color:var(--gris-500);">Para la 5ª estrella: nivel 5 + 2.500 XP ✓</p>
+                    </div>
+                </div>
+
+                <div class="caja-lateral" style="margin-bottom:1.2rem;">
+                    <h3>Insignias (RF-23)</h3>
+                    <div style="display:grid;gap:.5rem;">
+                        <span class="insignia dorado">🏅 Primera publicación</span>
+                        <span class="insignia verde">✅ Validado</span>
+                        <span class="insignia">⭐ Nivel 5</span>
+                        <span class="insignia gris">🔒 Investigador activo</span>
+                        <span class="insignia gris">🔒 Cinco estrellas</span>
+                        <span class="insignia gris">🔒 Embajador RIUL</span>
+                    </div>
+                </div>
+
+                <div class="caja-lateral" style="margin-bottom:1.2rem;">
+                    <h3>Historial de XP (RF-22)</h3>
+                    <div class="lista-elementos" style="gap:.5rem;font-size:.82rem;">
+                        <div style="display:flex;justify-content:space-between;"><span>Ponencia IA</span><strong style="color:var(--verde);">+300</strong></div>
+                        <div style="display:flex;justify-content:space-between;"><span>Proyecto activo</span><strong style="color:var(--verde);">+400</strong></div>
+                        <div style="display:flex;justify-content:space-between;"><span>Seminario metodologías</span><strong style="color:var(--verde);">+150</strong></div>
+                        <div style="display:flex;justify-content:space-between;"><span>Semilleros en acción</span><strong style="color:var(--verde);">+100</strong></div>
+                    </div>
+                </div>
+
+                <div class="caja-lateral">
+                    <h3>Criterios de progresión</h3>
+                    <div style="font-size:.8rem;display:grid;gap:.45rem;color:var(--gris-700);">
+                        <div>⭐ 1 · Registro completo del perfil</div>
+                        <div>⭐ 2 · Primer logro validado + publicación</div>
+                        <div>⭐ 3 · Evento + proyecto activo</div>
+                        <div>⭐ 4 · Tres logros aprobados</div>
+                        <div>⭐ 5 · Participación sostenida en semillero</div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div>
+                <h4>RIUL</h4>
+                <p style="font-size:.85rem;">Red de Investigación Universidad Libre.</p>
+            </div>
+            <div>
+                <h4>Módulos</h4>
+                <a href="semilleros.html">Semilleros</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="publicaciones.html">Publicaciones</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="logros.html">Logros e insignias</a>
+            </div>
+            <div>
+                <h4>Accesos</h4>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="perfil.html">Mi perfil</a>
+                <a href="login.html">Cerrar sesión</a>
+            </div>
+        </div>
+        <div class="legal">© 2026 Universidad Libre · Programación Web · Segundo corte</div>
+    </footer>
+
+</body>
+</html>
