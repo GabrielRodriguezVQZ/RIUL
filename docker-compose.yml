@@ -2,6 +2,8 @@
 # RIUL - Docker Compose
 # Servicios:
 #   web : interfaz HTML/CSS servida con Nginx  (http://localhost:8080)
+#         y proxy de /api/ hacia el servicio api
+#   api : API Node.js/Express (registro y login)  (   docker compose up --build)
 #   db  : MySQL 8.0 con schema.sql + seed.sql cargados automáticamente
 # =====================================================================
 
@@ -13,6 +15,23 @@ services:
     container_name: riul-web
     ports:
       - "8080:80"
+    depends_on:
+      - api
+    restart: unless-stopped
+
+  api:
+    build:
+      context: ./backend
+    container_name: riul-api
+    environment:
+      PORT: "3000"
+      DB_HOST: db
+      DB_PORT: "3306"
+      DB_USER: riul
+      DB_PASSWORD: riul2026
+      DB_NAME: riul
+    ports:
+      - "3000:3000"
     depends_on:
       db:
         condition: service_healthy

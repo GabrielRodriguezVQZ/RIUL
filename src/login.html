@@ -38,7 +38,9 @@
                 <p style="font-size:.85rem;color:var(--gris-500);">Ingresa con tus credenciales institucionales</p>
             </div>
 
-            <form action="dashboard.html" method="get">
+            <div id="aviso" class="aviso" role="alert" hidden></div>
+
+            <form id="form-login" method="post">
                 <div class="campo">
                     <label for="email">Correo institucional</label>
                     <input type="email" id="email" name="email" placeholder="nombre@unilibre.edu.co" required autocomplete="email">
@@ -71,5 +73,6 @@
         <div class="legal">© 2026 Universidad Libre · Programación Web · Segundo corte</div>
     </footer>
 
+    <script src="js/login.js" defer></script>
 </body>
 </html>

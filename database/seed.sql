@@ -4,6 +4,9 @@
 -- =====================================================================
 USE riul;
 
+-- Contraseña de TODOS los usuarios de ejemplo (hash bcrypt): Riul2026*
+-- Solo los usuarios con estado 'activo' pueden iniciar sesión.
+
 -- Catálogos
 INSERT INTO facultades (nombre) VALUES
 ('Facultad de Ingeniería'),
@@ -28,16 +31,16 @@ INSERT INTO categorias_publicacion (nombre, color) VALUES
 ('Resultados de proyecto', '#0e7490');
 
 INSERT INTO usuarios (programa_id, identificacion, nombre, apellido, email, password_hash, telefono, biografia, rol, estado, xp_acumulado, nivel, estrellas, posicion_ranking, fecha_registro) VALUES
-(1, '1001234567', 'María Angel', 'Duque Polo', 'maria.duque@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3001112233', 'Estudiante investigadora interesada en inteligencia artificial aplicada.', 'estudiante_investigador', 'activo', 2450, 5, 4, 1, '2026-02-01 08:00:00'),
-(1, '1007654321', 'Gabriel Enrique', 'Rodríguez Vásquez', 'gabriel.rodriguez@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3012223344', 'Focos de interés: desarrollo web y datos abiertos.', 'estudiante_investigador', 'activo', 2180, 4, 4, 2, '2026-02-01 08:10:00'),
-(2, '80123456', 'William Ricardo', 'Insignares Conde', 'william.insignares@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3103334455', 'Docente líder del semillero RIUL, líneas de investigación en innovación educativa.', 'docente_lider', 'activo', 3120, 5, 5, NULL, '2026-01-15 07:30:00'),
-(3, '79988776', 'Laura Marcela', 'Gómez Ríos', 'laura.gomez@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3124445566', 'Administradora de la plataforma RIUL.', 'administrador', 'activo', 900, 2, 3, NULL, '2026-01-10 07:00:00'),
-(1, '1009998887', 'Juan David', 'Berrocal Sanchez', 'juan.berrocal@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3135556677', NULL, 'estudiante_investigador', 'pendiente', 0, 1, 0, NULL, '2026-08-20 18:00:00'),
-(2, '1004443332', 'Carolina', 'Mejía Torres', 'carolina.mejia@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3157778899', 'Interés en metodologías cualitativas.', 'estudiante_investigador', 'activo', 1760, 4, 3, 3, '2026-03-05 09:00:00'),
-(3, '1003332221', 'Diego Alonso', 'Patiño Ruiz', 'diego.patino@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3168889900', NULL, 'estudiante_investigador', 'activo', 1540, 3, 3, 4, '2026-03-12 11:00:00'),
-(1, '1002221110', 'Sofía', 'Hernández Díaz', 'sofia.hernandez@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3179990011', 'Semillero de software libre.', 'estudiante_investigador', 'activo', 1320, 3, 3, 5, '2026-04-02 14:00:00'),
-(2, '1001110009', 'Camilo', 'Ortega Vela', 'camilo.ortega@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3180001122', NULL, 'estudiante_investigador', 'pendiente', 0, 1, 0, NULL, '2026-08-22 16:30:00'),
-(4, '1005556664', 'Andrés Felipe', 'Castro León', 'andres.castro@unilibre.edu.co', '$2y$10$ejemploHashSeguro000000000000000000000000000000000000', '3146667788', 'Visitante de la plataforma.', 'visitante', 'activo', 0, 1, 0, NULL, '2026-08-21 10:00:00');
+(1, '1001234567', 'María Angel', 'Duque Polo', 'maria.duque@unilibre.edu.co', '$2a$10$0WPd2rtDH1I1TtFk4Ai5u.jvPX/GGeWiXbE5gdeMCSSBiCsEIxknq', '3001112233', 'Estudiante investigadora interesada en inteligencia artificial aplicada.', 'estudiante_investigador', 'activo', 2450, 5, 4, 1, '2026-02-01 08:00:00'),
+(1, '1007654321', 'Gabriel Enrique', 'Rodríguez Vásquez', 'gabriel.rodriguez@unilibre.edu.co', '$2a$10$0WPd2rtDH1I1TtFk4Ai5u.jvPX/GGeWiXbE5gdeMCSSBiCsEIxknq', '3012223344', 'Focos de interés: desarrollo web y datos abiertos.', 'estudiante_investigador', 'activo', 2180, 4, 4, 2, '2026-02-01 08:10:00'),
+(2, '80123456', 'William Ricardo', 'Insignares Conde', 'william.insignares@unilibre.edu.co', '$2a$10$0WPd2rtDH1I1TtFk4Ai5u.jvPX/GGeWiXbE5gdeMCSSBiCsEIxknq', '3103334455', 'Docente líder del semillero RIUL, líneas de investigación en innovación educativa.', 'docente_lider', 'activo', 3120, 5, 5, NULL, '2026-01-15 07:30:00'),
+(3, '79988776', 'Laura Marcela', 'Gómez Ríos', 'laura.gomez@unilibre.edu.co', '$2a$10$0WPd2rtDH1I1TtFk4Ai5u.jvPX/GGeWiXbE5gdeMCSSBiCsEIxknq', '3124445566', 'Administradora de la plataforma RIUL.', 'administrador', 'activo', 900, 2, 3, NULL, '2026-01-10 07:00:00'),
+(1, '1009998887', 'Juan David', 'Berrocal Sanchez', 'juan.berrocal@unilibre.edu.co', '$2a$10$0WPd2rtDH1I1TtFk4Ai5u.jvPX/GGeWiXbE5gdeMCSSBiCsEIxknq', '3135556677', NULL, 'estudiante_investigador', 'pendiente', 0, 1, 0, NULL, '2026-08-20 18:00:00'),
+(2, '1004443332', 'Carolina', 'Mejía Torres', 'carolina.mejia@unilibre.edu.co', '$2a$10$0WPd2rtDH1I1TtFk4Ai5u.jvPX/GGeWiXbE5gdeMCSSBiCsEIxknq', '3157778899', 'Interés en metodologías cualitativas.', 'estudiante_investigador', 'activo', 1760, 4, 3, 3, '2026-03-05 09:00:00'),
+(3, '1003332221', 'Diego Alonso', 'Patiño Ruiz', 'diego.patino@unilibre.edu.co', '$2a$10$0WPd2rtDH1I1TtFk4Ai5u.jvPX/GGeWiXbE5gdeMCSSBiCsEIxknq', '3168889900', NULL, 'estudiante_investigador', 'activo', 1540, 3, 3, 4, '2026-03-12 11:00:00'),
+(1, '1002221110', 'Sofía', 'Hernández Díaz', 'sofia.hernandez@unilibre.edu.co', '$2a$10$0WPd2rtDH1I1TtFk4Ai5u.jvPX/GGeWiXbE5gdeMCSSBiCsEIxknq', '3179990011', 'Semillero de software libre.', 'estudiante_investigador', 'activo', 1320, 3, 3, 5, '2026-04-02 14:00:00'),
+(2, '1001110009', 'Camilo', 'Ortega Vela', 'camilo.ortega@unilibre.edu.co', '$2a$10$0WPd2rtDH1I1TtFk4Ai5u.jvPX/GGeWiXbE5gdeMCSSBiCsEIxknq', '3180001122', NULL, 'estudiante_investigador', 'pendiente', 0, 1, 0, NULL, '2026-08-22 16:30:00'),
+(4, '1005556664', 'Andrés Felipe', 'Castro León', 'andres.castro@unilibre.edu.co', '$2a$10$0WPd2rtDH1I1TtFk4Ai5u.jvPX/GGeWiXbE5gdeMCSSBiCsEIxknq', '3146667788', 'Visitante de la plataforma.', 'visitante', 'activo', 0, 1, 0, NULL, '2026-08-21 10:00:00');
 -- RF-04 Solicitudes de registro pendientes
 INSERT INTO solicitudes_registro (usuario_id, motivacion, estado, fecha_solicitud) VALUES
 (5, 'Estudiante de ingeniería de sistemas interesado en participar en el semillero de inteligencia artificial.', 'pendiente', '2026-08-20 18:05:00'),

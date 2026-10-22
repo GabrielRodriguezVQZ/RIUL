@@ -13,9 +13,14 @@ Prototipo técnico del **segundo corte**: estructura de base de datos, interface
 RIUL/
 ├── README.md                     ← Este documento
 ├── Dockerfile                    ← Imagen Docker (Nginx + interfaces)
-├── docker-compose.yml            ← Orquestación web + MySQL
+├── docker-compose.yml            ← Orquestación web + api + MySQL
 ├── docker/
-│   └── nginx.conf                ← Configuración del servidor web
+│   └── nginx.conf                ← Configuración del servidor web (y proxy /api)
+├── backend/
+│   ├── Dockerfile                ← Imagen Docker de la API
+│   ├── package.json              ← Dependencias (express, mysql2, bcryptjs, swagger-ui-express)
+│   ├── server.js                 ← API: registro y login
+│   └── openapi.js                ← Especificación OpenAPI 3.0 (Swagger)
 ├── database/
 │   ├── schema.sql                ← Modelo de datos (30 tablas, 3 vistas)
 │   └── seed.sql                  ← Datos de ejemplo coherentes
@@ -34,8 +39,11 @@ RIUL/
     ├── eventos.html              ← 8. Eventos y convocatorias
     ├── logros.html               ← 9. Logros y gamificación
     ├── admin.html                ← 10. Panel de administración
-    └── css/
-        └── styles.css            ← Hoja de estilos compartida
+    ├── css/
+    │   └── styles.css            ← Hoja de estilos compartida
+    └── js/
+        ├── registro.js           ← Envía el registro a /api/registro
+        └── login.js              ← Envía el acceso a /api/login
 ```
 
 ---
@@ -51,19 +59,42 @@ docker compose up --build
 
 | Servicio | URL / Puerto | Contenido |
 |---|---|---|
-| `riul-web` | http://localhost:8080 | Interfaces HTML/CSS (Nginx) |
+| `riul-web` | http://localhost:8080 | Interfaces HTML/CSS (Nginx) y proxy de `/api/` hacia la API |
+| `riul-api` | http://localhost:3000 | API Node.js/Express (registro y login) · Swagger en `/api/docs` |
 | `riul-db`  | localhost:3306 | MySQL 8.0 con `schema.sql` y `seed.sql` cargados al iniciar |
 
 - La base de datos se **crea y puebla automáticamente** en el primer arranque (carpetas `docker-entrypoint-initdb.d`).
 - Para detener: `docker compose down`
 - Para reiniciar **desde cero** (borra los datos): `docker compose down -v`
 
+## Registro y acceso de usuarios
+
+El formulario de registro guarda en MySQL y el login valida contra la base de datos.
+
+| Método | Ruta | Qué hace |
+|---|---|---|
+| POST | `/api/registro` | Crea el usuario con estado `pendiente` y su solicitud en `solicitudes_registro` (RF-02, RF-04) |
+| POST | `/api/login` | Valida correo y contraseña (bcrypt). Solo entran usuarios `activo` (RF-03, RNF-02) |
+| GET | `/api/health` | Comprueba que la API y la base de datos responden |
+| GET | `/api/docs` | Documentación interactiva **Swagger UI** (especificación en `/api/openapi.json`) |
+
+- **Swagger UI:** http://localhost:8080/api/docs (o http://localhost:3000/api/docs). Permite probar cada endpoint con el botón *Try it out*. La especificación vive en `backend/openapi.js`: si agregas o cambias un endpoint en `server.js`, actualízala ahí.
+- Las contraseñas se guardan con **bcrypt**, nunca en texto legible.
+- Desde el registro público solo se pueden solicitar los roles *estudiante investigador* y *docente líder*.
+- Una cuenta nueva queda `pendiente` hasta que un administrador la active:
+  ```sql
+  UPDATE usuarios SET estado = 'activo' WHERE email = 'correo@unilibre.edu.co';
+  ```
+- **Cuentas de prueba** (seed): contraseña `Riul2026*` para todas. Por ejemplo `maria.duque@unilibre.edu.co` (activa). Los usuarios con estado `pendiente` en el seed no pueden iniciar sesión.
+
 ## Ejecución sin Docker
 
 ```bash
-# Abrir directamente en el navegador
+# Abrir directamente en el navegador (solo para ver las interfaces)
 start src\index.html
 ```
+
+> Sin Docker el registro y el login no funcionan, porque necesitan la API y la base de datos. Usa `docker compose up --build` y abre http://localhost:8080.
 
 ---
 

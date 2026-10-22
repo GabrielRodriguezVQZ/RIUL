@@ -350,3 +350,16 @@ h3 { font-size: 1.05rem; color: var(--azul-800); }
     .nav a { padding: .45rem .6rem; font-size: .8rem; }
     .perfil-cabecera { text-align: center; justify-content: center; }
 }
+
+/* =====================================================================
+   Avisos de formulario (registro / login)
+   ===================================================================== */
+.aviso {
+    padding: .7rem .9rem;
+    border-radius: var(--radio);
+    border: 1px solid transparent;
+    font-size: .88rem;
+    margin-bottom: 1rem;
+}
+.aviso-exito { background: #e6f6ee; color: #0b6b3a; border-color: #b7e4cb; }
+.aviso-error { background: #fdecea; color: #a4221a; border-color: #f5c2be; }

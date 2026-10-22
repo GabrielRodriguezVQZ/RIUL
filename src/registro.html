@@ -38,7 +38,9 @@
                 <p style="font-size:.85rem;color:var(--gris-500);">Tu solicitud será revisada por el administrador antes de ser activada</p>
             </div>
 
-            <form action="login.html" method="get">
+            <div id="aviso" class="aviso" role="alert" hidden></div>
+
+            <form id="form-registro" method="post">
                 <div class="formulario-fila">
                     <div class="campo">
                         <label for="nombre">Nombres</label>
@@ -71,20 +73,20 @@
                         <label for="programa">Facultad y programa</label>
                         <select id="programa" name="programa" required>
                             <option value="">Seleccione…</option>
-                            <option>Ingeniería de Sistemas</option>
-                            <option>Ingeniería Industrial</option>
-                            <option>Psicología</option>
-                            <option>Administración de Empresas</option>
-                            <option>Enfermería</option>
-                            <option>Derecho</option>
+                            <option value="IS-01">Ingeniería de Sistemas</option>
+                            <option value="II-02">Ingeniería Industrial</option>
+                            <option value="PS-03">Psicología</option>
+                            <option value="AE-04">Administración de Empresas</option>
+                            <option value="EN-05">Enfermería</option>
+                            <option value="DE-06">Derecho</option>
                         </select>
                     </div>
                     <div class="campo">
                         <label for="rol">Rol solicitado</label>
                         <select id="rol" name="rol" required>
                             <option value="">Seleccione…</option>
-                            <option>Estudiante investigador</option>
-                            <option>Docente líder</option>
+                            <option value="estudiante_investigador">Estudiante investigador</option>
+                            <option value="docente_lider">Docente líder</option>
                         </select>
                     </div>
                 </div>
@@ -108,7 +110,7 @@
 
                 <div class="campo">
                     <label style="display:flex;align-items:flex-start;gap:.5rem;font-weight:400;">
-                        <input type="checkbox" style="width:auto;margin-top:.25rem;">
+                        <input type="checkbox" id="acepto" name="acepto" required style="width:auto;margin-top:.25rem;">
                         Acepto el tratamiento de mis datos personales conforme a las políticas institucionales (RNF-03).
                     </label>
                 </div>
@@ -125,5 +127,6 @@
         <div class="legal">© 2026 Universidad Libre · Programación Web · Segundo corte</div>
     </footer>
 
+    <script src="js/registro.js" defer></script>
 </body>
 </html>
