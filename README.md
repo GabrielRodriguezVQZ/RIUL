@@ -18,9 +18,8 @@ RIUL/
 │   └── nginx.conf                ← Configuración del servidor web (y proxy /api)
 ├── backend/
 │   ├── Dockerfile                ← Imagen Docker de la API
-│   ├── package.json              ← Dependencias (express, mysql2, bcryptjs, swagger-ui-express)
-│   ├── server.js                 ← API: registro y login
-│   └── openapi.js                ← Especificación OpenAPI 3.0 (Swagger)
+│   ├── requirements.txt          ← Dependencias Python (fastapi, uvicorn, PyMySQL, bcrypt)
+│   └── main.py                   ← API Python/FastAPI: registro, login y Swagger
 ├── database/
 │   ├── schema.sql                ← Modelo de datos (30 tablas, 3 vistas)
 │   └── seed.sql                  ← Datos de ejemplo coherentes
@@ -60,7 +59,7 @@ docker compose up --build
 | Servicio | URL / Puerto | Contenido |
 |---|---|---|
 | `riul-web` | http://localhost:8080 | Interfaces HTML/CSS (Nginx) y proxy de `/api/` hacia la API |
-| `riul-api` | http://localhost:3000 | API Node.js/Express (registro y login) · Swagger en `/api/docs` |
+| `riul-api` | http://localhost:3000 | API Python/FastAPI (registro y login) · Swagger en `/api/docs` |
 | `riul-db`  | localhost:3306 | MySQL 8.0 con `schema.sql` y `seed.sql` cargados al iniciar |
 
 - La base de datos se **crea y puebla automáticamente** en el primer arranque (carpetas `docker-entrypoint-initdb.d`).
@@ -78,12 +77,19 @@ El formulario de registro guarda en MySQL y el login valida contra la base de da
 | GET | `/api/health` | Comprueba que la API y la base de datos responden |
 | GET | `/api/docs` | Documentación interactiva **Swagger UI** (especificación en `/api/openapi.json`) |
 
-- **Swagger UI:** http://localhost:8080/api/docs (o http://localhost:3000/api/docs). Permite probar cada endpoint con el botón *Try it out*. La especificación vive en `backend/openapi.js`: si agregas o cambias un endpoint en `server.js`, actualízala ahí.
+- **Swagger UI:** http://localhost:8080/api/docs (o http://localhost:3000/api/docs). Permite probar cada endpoint con el botón *Try it out*. La especificación se genera sola a partir de `backend/main.py` (modelos y decoradores de cada endpoint), así que siempre coincide con el código. La interfaz de Swagger carga sus archivos desde internet (CDN), por lo que necesita conexión.
 - Las contraseñas se guardan con **bcrypt**, nunca en texto legible.
 - Desde el registro público solo se pueden solicitar los roles *estudiante investigador* y *docente líder*.
-- Una cuenta nueva queda `pendiente` hasta que un administrador la active:
+- Una cuenta nueva queda `pendiente` hasta que un administrador la apruebe. Para que quede registrado **quién** la aprobó y **cuándo** (RNF-13), se actualizan las dos tablas:
   ```sql
+  START TRANSACTION;
+  UPDATE solicitudes_registro
+     SET estado = 'aprobada',
+         revisado_por = (SELECT id FROM (SELECT id FROM usuarios WHERE rol = 'administrador' LIMIT 1) a),
+         fecha_respuesta = NOW()
+   WHERE usuario_id = (SELECT id FROM (SELECT id FROM usuarios WHERE email = 'correo@unilibre.edu.co') b);
   UPDATE usuarios SET estado = 'activo' WHERE email = 'correo@unilibre.edu.co';
+  COMMIT;
   ```
 - **Cuentas de prueba** (seed): contraseña `Riul2026*` para todas. Por ejemplo `maria.duque@unilibre.edu.co` (activa). Los usuarios con estado `pendiente` en el seed no pueden iniciar sesión.
 

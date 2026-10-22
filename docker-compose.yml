@@ -3,7 +3,7 @@
 # Servicios:
 #   web : interfaz HTML/CSS servida con Nginx  (http://localhost:8080)
 #         y proxy de /api/ hacia el servicio api
-#   api : API Node.js/Express (registro y login)  (   docker compose up --build)
+#   api : API Python/FastAPI (registro y login)   (http://localhost:3000)
 #   db  : MySQL 8.0 con schema.sql + seed.sql cargados automáticamente
 # =====================================================================
 
